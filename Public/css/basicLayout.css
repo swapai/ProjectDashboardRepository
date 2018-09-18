@@ -1,3 +1,58 @@
+<<<<<<< HEAD
+#banner {
+  background-color: #333333;
+  color: #999999;
+  font-size: 40px;
+  height: 50px;
+padding-bottom: 3px;}
+
+
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, "sans-serif";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2.2;
+  color: #999999;
+  text-align: left;}
+
+  a {
+  color: #333333;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects; }
+  a:hover {
+    color: #0d0d0d;
+    text-decoration: underline; }
+
+
+img {
+  vertical-align: middle;
+  border-style: none; }
+
+  table {
+  border-collapse: collapse;
+ }
+
+ th {
+   padding: 3px;
+   font-size: 15px;
+ }
+
+td {
+  padding: 3px;
+  font-size: 12px;
+}
+
+  footer {
+    background-color: #333333;
+    color: #999999;
+    font-size: 0.9rem; }
+
+    footer p {
+  margin: 0;
+  padding-bottom: 1rem; }
+=======
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 
@@ -100,3 +155,4 @@ body {
 .tile.invoice  .body {
   color: #0aa361;
 }
+>>>>>>> f208e77bc042d878fb7ad694692e87b613982ed7
