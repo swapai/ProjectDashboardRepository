@@ -17,8 +17,7 @@ body {
   font-weight: 400;
   line-height: 2.2;
   color: #999999;
-  text-align: left;
-  background-color: #fff; }
+  text-align: left;}
 
   a {
   color: #333333;
@@ -29,13 +28,28 @@ body {
     color: #0d0d0d;
     text-decoration: underline; }
 
+h1, h2, h3, h4, h5 {
+  color:#078e0f;
+}
+
 
 img {
   vertical-align: middle;
   border-style: none; }
 
   table {
-  border-collapse: collapse; }
+  border-collapse: collapse;
+ }
+
+ th {
+   padding: 3px;
+   font-size: 15px;
+ }
+
+td {
+  padding: 3px;
+  font-size: 12px;
+}
 
   footer {
     background-color: #333333;
@@ -147,5 +161,12 @@ body {
 
 .tile.invoice  .body {
   color: #0aa361;
+}
+.card{
+  margin:50px;
+  margin-top: 75px;
+  display:inline-block;
+  padding: 10px;
+  width: 25rem;
 }
 >>>>>>> f208e77bc042d878fb7ad694692e87b613982ed7
