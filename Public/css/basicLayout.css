@@ -159,4 +159,11 @@ body {
 .tile.invoice  .body {
   color: #0aa361;
 }
+.card{
+  margin:50px;
+  margin-top: 75px;
+  display:inline-block;
+  padding: 10px;
+  width: 25rem;
+}
 >>>>>>> f208e77bc042d878fb7ad694692e87b613982ed7
