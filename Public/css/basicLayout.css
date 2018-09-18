@@ -25,6 +25,10 @@ body {
     color: #0d0d0d;
     text-decoration: underline; }
 
+h1, h2, h3, h4, h5 {
+  color:#078e0f;
+}
+
 
 img {
   vertical-align: middle;
