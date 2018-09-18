@@ -14,8 +14,7 @@ body {
   font-weight: 400;
   line-height: 2.2;
   color: #999999;
-  text-align: left;
-  background-color: #fff; }
+  text-align: left;}
 
   a {
   color: #333333;
@@ -32,7 +31,18 @@ img {
   border-style: none; }
 
   table {
-  border-collapse: collapse; }
+  border-collapse: collapse;
+ }
+
+ th {
+   padding: 3px;
+   font-size: 15px;
+ }
+
+td {
+  padding: 3px;
+  font-size: 12px;
+}
 
   footer {
     background-color: #333333;
