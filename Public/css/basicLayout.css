@@ -85,6 +85,16 @@ body {
   color: #999999;
 }
 
+#homebutton{
+  margin:14px;
+  font-size:16pt;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #999999;
+    border-color: #999999
+}
 
 .container {
   margin: 50px 0 0 100px;
