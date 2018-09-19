@@ -27,6 +27,7 @@ body {
 
   a {
   color:#078e0f;
+  font-size: 18px;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
