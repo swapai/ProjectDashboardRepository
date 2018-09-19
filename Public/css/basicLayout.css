@@ -24,6 +24,7 @@ body {
   color: #999999;
   text-align: left;}
 
+
   a {
   color:#078e0f;
   text-decoration: none;
@@ -76,6 +77,14 @@ td {
 body {
     background-color:#ececec;
 }
+
+.homebutton{
+  font-size:20pt;
+  padding-right:10px;
+  padding-top:20px;
+  color: #999999;
+}
+
 
 .container {
   margin: 50px 0 0 100px;
