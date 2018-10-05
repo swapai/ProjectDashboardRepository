@@ -10,7 +10,7 @@ class Client{
 
   public function __construct($data){
     $this->clientId = isset($data['clientId']) ? intval($data['clientId']) : null;
-    $this->clientName = $data['$clientName'];
+    $this->clientName = $data['clientName'];
     $this->clientDescription = $data['clientDescription'];
     $this->gicsSector = $data['gicsSector'];
     $this->gicsSubIndustry = $data['gicsSubIndustry'];
@@ -53,7 +53,7 @@ class Client{
       return $arr;
   }
 
-  
+
   public function create() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     $sql = 'INSERT into client (clientName, clientDescription, gicsSector,gicsSubIndustry,headquarters)
