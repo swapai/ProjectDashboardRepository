@@ -82,7 +82,7 @@ CREATE TABLE sensorTimeSeries (
   sensorDeployedId INT REFERENCES sensorDeployed(sensorDeployedId),
   dataCollectedDate DATETIME,
   output DEC(15,7),
-  output DEC(30,11),
+  heatRate DEC(30,11),
   compressorEfficiency DEC(15,8),
   availability DEC(15,8),
   reliability DEC(15,8),
