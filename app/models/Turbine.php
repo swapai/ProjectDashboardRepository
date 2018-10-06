@@ -2,7 +2,7 @@
 
 class Turbine
 {
-  public $turbineID;
+  public $turbineId;
   public $turbineName;
   public $turbineDescription;
   public $turbineContact;
