@@ -56,6 +56,7 @@ class Turbine
 
           $this->turbineId = $db->lastInsertId();
         }
+        
         public static function getTurbineByTurbineId(int $turbineId) {
           // 1. Connect to the database
           $db = new PDO(DB_SERVER, DB_USER, DB_PW);
