@@ -7,18 +7,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   exit;
 }
 
-//$taskId = intval($_GET['taskId'] ?? 0);
+//$Id = intval($_GET['id'] ?? 0);
 
-//if ($taskId < 1) {
-  //throw new Exception('Invalid Task ID');
+//if ($Id < 1) {
+  //throw new Exception('Invalid ID');
 //}
 
 
 // 1. Go to the database and get all work associated with the $taskId
-$turbines = Turbine::fetchAll();
+$turbineArr = Turbine::getTurbine();
 
 // 2. Convert to JSON
-$json = json_encode($turbines, JSON_PRETTY_PRINT);
+$json = json_encode($turbineArr, JSON_PRETTY_PRINT);
 
 // 3. Print
 header('Content-Type: application/json');

@@ -20,7 +20,7 @@ class Turbine
     $this->maintenanceInterval = $row['maintenanceInterval'];
     }
 
-    public static function fectchAll() {
+    public static function getTurbine() {
       // 1. Connect to the database
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
@@ -40,26 +40,6 @@ class Turbine
       return $arr;
       }
 
-    public static function getTurbineByTurbineId(int $turbineId) {
-        // 1. Connect to the database
-        $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-        // 2. Prepare the query
-        $sql = 'SELECT * FROM turbine WHERE turbineId = ?';
-        $statement = $db->prepare($sql);
-        // 3. Run the query
-        $success = $statement->execute(
-            [$turbineId]
-        );
-        // 4. Handle the results
-        $arr = [];
-        while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-          // 4.a. For each row, make a new turbine object
-          $turbineItem =  new Turbine($row);
-          array_push($arr, $turbineItem);
-        }
-          return $arr;
-      }
-
     public function create() {
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
       $sql = 'INSERT Turbine (turbineName, turbineDescription, turbineContact, capacity, rampUpTime, maintenanceInterval)
@@ -77,4 +57,4 @@ class Turbine
           $this->turbineId = $db->lastInsertId();
         }
 
-  }     
+  }
