@@ -12,12 +12,12 @@ class Turbine
 
   public function __construct($row) {
     $this->turbineId = isset($row['turbineId']) ? intval($row['turbineId']) : null;
-    $this->turbineName = $row['turbineName']);
-    $this->turbineDescription = $row['turbineDescription']);
+    $this->turbineName = $row['turbineName'];
+    $this->turbineDescription = $row['turbineDescription'];
     $this->turbineContact = $row['turbineContact'];
-    $this->capacity = $row['capacity']);
-    $this->ramupTime = $row['ramupTime']);
-    $this->maintenanceInterval = $row['maintenanceInterval']);
+    $this->capacity = $row['capacity'];
+    $this->ramupTime = $row['ramupTime'];
+    $this->maintenanceInterval = $row['maintenanceInterval'];
 
   public function create() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
