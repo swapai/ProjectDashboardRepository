@@ -6,7 +6,7 @@ class Turbine
   public $turbineName;
   public $turbineDescription;
   public $capacity;
-  public $ramUpTime;
+  public $rampUpTime;
   public $maintenanceInterval;
 
   public function __construct($row) {
