@@ -5,7 +5,6 @@ class Turbine
   public $turbineId;
   public $turbineName;
   public $turbineDescription;
-  public $turbineContact;
   public $capacity;
   public $ramupTime;
   public $maintenanceInterval;
@@ -14,7 +13,6 @@ class Turbine
     $this->turbineId = isset($row['turbineId']) ? intval($row['turbineId']) : null;
     $this->turbineName = $row['turbineName'];
     $this->turbineDescription = $row['turbineDescription'];
-    $this->turbineContact = $row['turbineContact'];
     $this->capacity = intval($row['capacity']);
     $this->ramupTime = intval ($row['ramupTime']);
     $this->maintenanceInterval = intval ($row['maintenanceInterval']);
@@ -42,13 +40,12 @@ class Turbine
 
     public function create() {
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-      $sql = 'INSERT into turbine (turbineName, turbineDescription, turbineContact, capacity, rampUpTime, maintenanceInterval)
-            VALUES (?, ?, ?, ?, ?, ?)';
+      $sql = 'INSERT into turbine (turbineName, turbineDescription, capacity, rampUpTime, maintenanceInterval)
+            VALUES (?, ?, ?, ?, ?)';
       $statement = $db->prepare($sql);
       $success = $statement->execute([
             $this->turbineName,
             $this->turbineDescription,
-            $this->turbineContact,
             $this->capacity,
             $this->ramupTime,
             $this->maintenanceInterval

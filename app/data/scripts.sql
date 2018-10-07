@@ -33,7 +33,6 @@ CREATE TABLE turbine (
   turbineId INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   turbineName VARCHAR(10),
   turbineDescription VARCHAR(500),
-  primaryContact VARCHAR(30),
   capacity INT,
   rampUpTime INT,
   maintenanceInterval INT
