@@ -14,7 +14,7 @@ class Turbine
     $this->turbineName = $row['turbineName'];
     $this->turbineDescription = $row['turbineDescription'];
     $this->capacity = intval($row['capacity']);
-    $this->ramUpTime = intval ($row['ramUpTime']);
+    $this->rampUpTime = intval ($row['rampUpTime']);
     $this->maintenanceInterval = intval ($row['maintenanceInterval']);
     }
 
@@ -47,7 +47,7 @@ class Turbine
             $this->turbineName,
             $this->turbineDescription,
             $this->capacity,
-            $this->ramUpTime,
+            $this->rampUpTime,
             $this->maintenanceInterval
           ]);
 
