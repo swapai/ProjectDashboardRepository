@@ -7,7 +7,7 @@ class Sensor
   public $sensorDescription;
   public $primaryContact;
   public $manufacturer;
-  public $totalLifeExpectancyHours;
+  public $totalLifeExpentancyHours;
 
 
   public function __construct($row) {
@@ -16,7 +16,7 @@ class Sensor
     $this->sensorDescription = $row['sensorDescription'];
     $this->primaryContact = $row['primaryContact'];
     $this->manufacturer = $row['manufacturer'];
-    $this->totalLifeExpectancyHours = $row['totalLifeExpectancyHours'];
+    $this->totalLifeExpentancyHours = $row['totalLifeExpectancyHours'];
     }
 
     public static function fetchAll() {
@@ -41,7 +41,7 @@ class Sensor
 
     public function create() {
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-      $sql = 'INSERT into sensor (sensorName, sensorDescription, primaryContact, manufacturer, totalLifeExpectancyHours)
+      $sql = 'INSERT into sensor (sensorName, sensorDescription, primaryContact, manufacturer, totalLifeExpentancyHours)
             VALUES (?, ?, ?, ?, ?)';
       $statement = $db->prepare($sql);
       $success = $statement->execute([
@@ -49,7 +49,7 @@ class Sensor
             $this->sensorDescription,
             $this->primaryContact,
             $this->manufacturer,
-            $this->totalLifeExpectancyHours,
+            $this->totalLifeExpentancyHours,
           ]);
 
           $this->sensorId = $db->lastInsertId();
