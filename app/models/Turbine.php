@@ -15,9 +15,9 @@ class Turbine
     $this->turbineName = $row['turbineName'];
     $this->turbineDescription = $row['turbineDescription'];
     $this->turbineContact = $row['turbineContact'];
-    $this->capacity = $row['capacity'];
-    $this->ramupTime = $row['ramupTime'];
-    $this->maintenanceInterval = $row['maintenanceInterval'];
+    $this->capacity = intval($row['capacity']);
+    $this->ramupTime = intval ($row['ramupTime']);
+    $this->maintenanceInterval = intval ($row['maintenanceInterval']);
     }
 
     public static function getTurbine() {
@@ -56,7 +56,7 @@ class Turbine
 
           $this->turbineId = $db->lastInsertId();
         }
-        
+
         public static function getTurbineByTurbineId(int $turbineId) {
           // 1. Connect to the database
           $db = new PDO(DB_SERVER, DB_USER, DB_PW);
