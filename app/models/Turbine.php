@@ -42,7 +42,7 @@ class Turbine
 
     public function create() {
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-      $sql = 'INSERT Turbine (turbineName, turbineDescription, turbineContact, capacity, rampUpTime, maintenanceInterval)
+      $sql = 'INSERT into turbine (turbineName, turbineDescription, turbineContact, capacity, rampUpTime, maintenanceInterval)
             VALUES (?, ?, ?, ?, ?, ?)';
       $statement = $db->prepare($sql);
       $success = $statement->execute([
