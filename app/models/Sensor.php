@@ -16,7 +16,7 @@ class Sensor
     $this->sensorDescription = $row['sensorDescription'];
     $this->primaryContact = $row['primaryContact'];
     $this->manufacturer = $row['manufacturer'];
-    $this->totalLifeExpentancyHours = $row['totalLifeExpectancyHours'];
+    $this->totalLifeExpentancyHours = $row['totalLifeExpentancyHours'];
     }
 
     public static function fetchAll() {
