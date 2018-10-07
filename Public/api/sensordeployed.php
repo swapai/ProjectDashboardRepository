@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //   exit;
 // }
 $sensorDeployed = SensorDeployed::fetchAll();
-$json = json_encode($sensors, JSON_PRETTY_PRINT);
+$json = json_encode($sensorDeployed, JSON_PRETTY_PRINT);
 // 3. Print
 header('Content-Type: application/json');
 echo $json;
