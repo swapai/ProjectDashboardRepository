@@ -1,4 +1,4 @@
-INSERT INTO sensorTimeSeries (sensorDeployedId, ataCollectiveDate, output, heatRate, compressorEfficiency, availability, reliability, firedHours, trips, starts)
+INSERT INTO sensorTimeSeries (sensorDeployedId, dataCollectiveDate, output, heatRate, compressorEfficiency, availability, reliability, firedHours, trips, starts)
 VALUES (1, '2016-01-01 00:00:00', '151', '9841', '91', '97', '99', '17', 0, 1),
 (1, '2016-01-02 00:00:00', '153', '9733', '92', '97', '100', '18', 1, 0),
 (1, '2016-01-03 00:00:00', '150', '9635', '89', '96', '100', '16', 0, 1),

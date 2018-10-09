@@ -78,7 +78,7 @@ DROP TABLE IF EXISTS sensorTimeSeries;
 
 CREATE TABLE sensorTimeSeries (
   sensorDeployedId INT REFERENCES sensorDeployed(sensorDeployedId),
-  dataCollectedDate DATETIME,
+  dataCollectiveDate DATETIME,
   output DEC(15,7),
   heatRate DEC(30,11),
   compressorEfficiency DEC(15,8),

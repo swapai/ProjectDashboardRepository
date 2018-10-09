@@ -14,7 +14,7 @@ class TurbineDeployed
 
   public function __construct($row) {
     $this->turbineDeployedId = isset($row['turbineDeployedId']) ? intval($row['turbineDeployedId']) : null;
-    $this->turbineId =intval($row['$turbineId']);
+    $this->turbineId =$data['$turbineId'];
     $this->siteId = intval($row['siteId']);
     $this->serialNumber = $row['serialNumber'];
     $this->deployedDate = $row['deployedDate'];
