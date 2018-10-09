@@ -14,12 +14,12 @@ class TurbineDeployed
 
   public function __construct($row) {
     $this->turbineDeployedId = isset($row['turbineDeployedId']) ? intval($row['turbineDeployedId']) : null;
-    $this->turbineId =$data['$turbineId'];
-    $this->siteId = intval($row['siteId']);
+    $this->turbineId = $row['turbineId'];
+    $this->siteId = $row['siteId'];
     $this->serialNumber = $row['serialNumber'];
     $this->deployedDate = $row['deployedDate'];
-    $this->totalFiredHours = intval ($row['totalFiredHours']);
-    $this->totalStarts = intval ($row['totalStarts']);
+    $this->totalFiredHours = $row['totalFiredHours'];
+    $this->totalStarts = $row['totalStarts'];
     $this->lastPlannedOutageDate = $row['lastPlannedOutageDate'];
     $this->lastUnplannedOutageDate = $row['lastUnplannedOutageDate'];
     }
