@@ -49,10 +49,11 @@ class SensorTimeSeries
 
     public function create() {
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-      $sql = 'INSERT into sensorTimeSeries (dataCollectiveDate, output, heatRate, compressorEfficiency, availability, reliability, firedHours, trips, starts)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)';
+      $sql = 'INSERT into sensorTimeSeries (sensorDeployedId, ataCollectiveDate, output, heatRate, compressorEfficiency, availability, reliability, firedHours, trips, starts)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
       $statement = $db->prepare($sql);
       $success = $statement->execute([
+            $this->sensorDeployedId,
             $this->dataCollectiveDate,
             $this->output,
             $this->heatRate,
@@ -64,7 +65,6 @@ class SensorTimeSeries
             $this->starts,
           ]);
 
-          $this->sensorDeployedId = $db->lastInsertId();
         }
 
         public static function getSensorTimeSeriesBySensorDeployedId(int $sensorDeployedId) {
