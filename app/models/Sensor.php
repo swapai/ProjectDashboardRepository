@@ -5,7 +5,6 @@ class Sensor
   public $sensorId;
   public $sensorName;
   public $sensorDescription;
-  public $primaryContact;
   public $manufacturer;
   public $totalLifeExpentancyHours;
 
@@ -14,7 +13,6 @@ class Sensor
     $this->sensorId = isset($row['sensorId']) ? intval($row['sensorId']) : null;
     $this->sensorName = $row['sensorName'];
     $this->sensorDescription = $row['sensorDescription'];
-    $this->primaryContact = $row['primaryContact'];
     $this->manufacturer = $row['manufacturer'];
     $this->totalLifeExpentancyHours = $row['totalLifeExpentancyHours'];
     }
@@ -41,13 +39,12 @@ class Sensor
 
     public function create() {
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-      $sql = 'INSERT into sensor (sensorName, sensorDescription, primaryContact, manufacturer, totalLifeExpentancyHours)
+      $sql = 'INSERT into sensor (sensorName, sensorDescription, manufacturer, totalLifeExpentancyHours)
             VALUES (?, ?, ?, ?, ?)';
       $statement = $db->prepare($sql);
       $success = $statement->execute([
             $this->sensorName,
             $this->sensorDescription,
-            $this->primaryContact,
             $this->manufacturer,
             $this->totalLifeExpentancyHours,
           ]);

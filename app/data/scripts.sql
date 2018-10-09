@@ -59,7 +59,6 @@ CREATE TABLE sensor (
   sensorId INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
   sensorName VARCHAR(15),
   sensorDescription VARCHAR(300),
-  primaryContact VARCHAR(30),
   manufacturer VARCHAR(40),
   totalLifeExpentancyHours INT
 );
