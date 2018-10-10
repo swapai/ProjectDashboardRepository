@@ -44,10 +44,6 @@
             </div>
 
 
-
-
-
-
       <div class="card">
           <img class="card-img-top" src="https://marineenergy.biz/wp-content/uploads/2018/08/tidal-energy-demonstration-a-worthwhile-endeavor.jpg" alt="Card image cap">
         <div class="card-body">
@@ -61,7 +57,7 @@
           </p>
               </div>
             </div>
-            
+
             <div class="collapse" id="tablecollapse1">
                 <div class="card" style="width: 100rem;">
                 <div class="card-body">
@@ -268,34 +264,28 @@
 
               </div>
 
+      <div class="card">
+        <h1>Add New Notes on Client</h1>
 
-              <h1>Add New Information</h1>
+          <form action="#" method="get">
+            <label>Client</label>
+              <select id="client" v-model="workForm.clientId" class="form-control" required>
+                <option v-for="c in clientList"
+                :key="c.ClientId"
+                :value="c.ClientId">{{ c.ClientName }}</option>
+              </select>
 
-              <form action="#">
-              <label for="placeholder">Placeholder</label>
-              <input type="text" id="#" name="placeholder" placeholder="Placeholder">
-
-              <label for="placeholder">Placeholder</label>
-              <input type="text" id="#2" name="placeholder" placeholder="Placeholder">
-
-              <label for="placeholder">Placeholder</label>
-              <input type="text" id="#3" name="placeholder" placeholder="Placeholder">
-
-              <label for="placeholder">Placeholder</label>
-              <input type="text" id="#4" name="placeholder" placeholder="Placeholder">
-
-              <label for="placeholder">Placeholder</label>
-              <input type="text" id="#5" name="placeholder" placeholder="Placeholder">
-
-              <label for="placeholder">Placeholder</label>
-              <input type="text" id="#6" name="placeholder" placeholder="Placeholder">
+            <label for="placeholder">Notes</label>
+            <br/>
+              <textarea rows="10" cols="45"></textarea>
 
 
-              <input type="submit" value="Add New Information">
+          <br/>
+          <input type="submit" value="Add New Notes">
 
-              </form>
+          </form>
 
-
+</div>
 
 
 
