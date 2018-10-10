@@ -77,18 +77,18 @@ class Site{
             VALUES (?,?,?,?,?,?,?,?,?,?,?,?)';
     $statement = $db->prepare($sql);
     $success = $statement->execute([
-      $this->clientId;
-      $this->siteName;
-      $this->siteDescription;
-      $this->primaryContact;
-      $this->capacity;
-      $this->commercialDate;
-      $this->addrLine1;
-      $this->addrLine2;
-      $this->addrCity;
-      $this->addrState;
-      $this->addrZip;
-      $this->addrCountry;
+      $this->clientId,
+      $this->siteName,
+      $this->siteDescription,
+      $this->primaryContact,
+      $this->capacity,
+      $this->commercialDate,
+      $this->addrLine1,
+      $this->addrLine2,
+      $this->addrCity,
+      $this->addrState,
+      $this->addrZip,
+      $this->addrCountry
     ]);
     $this->siteId = $db->lastInsertId();
   }
