@@ -11,7 +11,7 @@ class Notes{
     $this->notesId = isset($data['notesId']) ? intval($data['notesId']) : null;
     $this->clientId = $data['clientId'];
     $this->clientName = $data['clientName'];
-    $this->notes = $data['notes'];
+    $this->notes = $data['notes']
   }
 
   public static function fetchAll(){
