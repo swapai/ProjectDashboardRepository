@@ -17,7 +17,7 @@ class Site{
 
 
   public function __construct($data){
-    $this->$siteId = isset($data['siteId']) ? intval($data['siteId']) : null;
+    $this->siteId = isset($data['siteId']) ? intval($data['siteId']) : null;
     $this->clientId = $data['clientId'];
     $this->siteName = $data['siteName'];
     $this->siteDescription = $data['siteDescription'];
