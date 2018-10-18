@@ -6,10 +6,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   exit;
 }
 
-$siteId = intval($_GET['siteId'] ?? 0);
+$clientId = intval($_GET['clientId'] ?? 0);
 
-if ($siteId < 1) {
-  throw new Exception('Invalid Site ID');
+if ($clientId < 1) {
+  throw new Exception('Invalid Client ID');
 }
 // $clientId = intval($_GET['clientId'] ?? 0);
 // if ($clientId >= 1) {
