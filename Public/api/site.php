@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //   echo $json;
 //   exit;
 // }
-$sites = Site::getSiteByClientId($clientId);
+$sites = Site::getSiteByClientId();
 $json = json_encode($sites, JSON_PRETTY_PRINT);
 // 3. Print
 header('Content-Type: application/json');
