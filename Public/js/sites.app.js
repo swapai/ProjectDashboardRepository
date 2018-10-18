@@ -10,6 +10,11 @@ var sitesApp = new Vue({
 // },
   created (){
 
+    const url = new URL(window.location.href);
+    const clientId = url.searchParams.get('clientId');
+    console.log('Client: '+ clientId);
+    this.siteList.clientId = clientId;
+
     fetch('api/site.php?clientId='+clientId)
     .then( response => response.json() )
     .then( json => {sitesApp.work = json} )
