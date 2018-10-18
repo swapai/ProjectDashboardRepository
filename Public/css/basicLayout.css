@@ -95,6 +95,10 @@ body {
   font-size:16pt;
 }
 
+.pagetitle {
+  padding-left:10px;
+}
+
 .btn-primary {
     color: white;
     background-color: #999999;
