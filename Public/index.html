@@ -37,8 +37,7 @@
           <p class="card-text">{{c.clientDescription}}</p>
 
           <p>
-            <a class="btn btn-primary" :key="clientId"
-            :id="'client-' + clientId" @click="gotoSite(ClientId)" href="site.html" role="button">Client Sites</a>
+            <a class="btn btn-primary" @click="gotoSite(ClientId)" role="button">Client Sites</a>
           </p>
       </div>
       </div>

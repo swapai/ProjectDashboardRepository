@@ -5,16 +5,10 @@ var clientsApp = new Vue({
 },
 methods: {
   gotoSite(cid) {
-    window.location = 'task.html?clientId=' + cid;
+    window.location = 'site.html?clientId=' + cid;
   }
 },
   created (){
-    const url = new URL(window.location.href);
-    const clientId = url.searchParams.get('clientId') || 0;
-
-    if (!clientId) {
-      console.error('client Id not defined in URL parameters.')
-    }
 
 
     fetch('api/client.php')
