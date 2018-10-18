@@ -6,6 +6,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   exit;
 }
 
+$siteId = intval($_GET['siteId'] ?? 0);
+
+if ($siteId < 1) {
+  throw new Exception('Invalid Site ID');
+}
 // $clientId = intval($_GET['clientId'] ?? 0);
 // if ($clientId >= 1) {
 //   $clientArr = Client::getClientByClientId($clientId);
