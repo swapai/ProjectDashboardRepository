@@ -39,7 +39,11 @@ h1, h2, h3, h4, h5 {
   color:#078e0f;
 }
 
+textarea {
+  margin-bottom: 10px;
 
+
+}
 img {
   vertical-align: middle;
   border-style: none; }
@@ -89,6 +93,10 @@ body {
 #homebutton{
   margin:14px;
   font-size:16pt;
+}
+
+.pagetitle {
+  padding-left:10px;
 }
 
 .btn-primary {
