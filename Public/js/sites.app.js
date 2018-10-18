@@ -10,12 +10,12 @@ var sitesApp = new Vue({
 // },
   created (){
 
-    fetch('api/site.php')
-      .then( response => response.json() )
-      .then( json => {sitesApp.siteList = json} )
-      .catch( err => {
-        console.error('SITE FETCH ERROR:');
-        console.error(err);
-      })
+    fetch('api/site.php?clientId='+clientId)
+    .then( response => response.json() )
+    .then( json => {sitesApp.work = json} )
+    .catch( err => {
+      console.error('SITE FETCH ERROR:');
+      console.error(err);
+    })
   }
 })
