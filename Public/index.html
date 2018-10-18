@@ -28,7 +28,8 @@
 
     <main id="clientMain">
 
-      <div class="card" v-for="c in clientList" >
+      <div class="card" v-for="c in clientList" :key="clientId"
+                :id="'client-' + clientId">
 
           <div class="card-body" >
           <h5 class="card-title">{{c.clientName}}</h5>
@@ -37,7 +38,7 @@
           <p class="card-text">{{c.clientDescription}}</p>
 
           <p>
-            <a class="btn btn-primary" @click="gotoSite(ClientId)" role="button">Client Sites</a>
+            <a class="btn btn-primary" @click="gotoSite(clientId)" role="button">Client Sites</a>
           </p>
       </div>
       </div>
