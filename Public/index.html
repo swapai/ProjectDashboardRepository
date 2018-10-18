@@ -28,9 +28,9 @@
 
     <main id="clientMain">
 
-      <div class="card"> 
+      <div class="card" v-for="c in clientList"> 
 
-          <div class="card-body" v-for="c in clientList">
+          <div class="card-body" >
           <h5 class="card-title">{{c.clientName}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{c.gicsSector}} - {{c.gicsSubIndustry}}</h6>
           <h6 class="card-subtitle mb-2 text-muted">{{c.headquarters}}</h6>
