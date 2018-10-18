@@ -30,28 +30,20 @@
 
       <div>
 
-            <h5 class="card-title"><a href="turbine.html">Emerald Waters Plant</a></h5>
-            <h6 class="card-subtitle mb-2 text-muted">Pacific Tidal Energy</h6>
-            <p class="card-text">The Emereald Waters Plant is a tidal field located at the mouth of the Columbia River, several miles west of Vancouver, Washington. Emerald Waters' first unit began commercial service in 1994, and its second unit followed in 1998.</p>
-
-            <table class="table table-striped">
-                <thead>
-                  <td>Primary Contact</td>
-                  <td>Capacity</td>
-                  <td>Commercial Date</td>
-                  <td>Address</td>
-                  <td>City</td>
-                  <td>State</td>
-                  <td>Zipcode</td>
-                  <td>Country</td>
-                </thead>
-
-                <tbody>
-                <tr>
-                  <td></td>
-                </tr>
-                </tbody>
-              </table>
+        <div class="card" style="width: 80%;" v-for="s in siteList">
+        <div class="card-body">
+            <h5 class="card-title"><a href="turbine.html">{{s.siteName}}</a></h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{s.primaryContact}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{s.capacity}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{s.commercialDate}}</h6>
+            <h7 class="card-subtitle mb-2 text-muted">{{s.addrLine1}} {{s.addrLine2}}</h7>
+            <h7 class="card-subtitle mb-2 text-muted">{{s.addrCity}}</h7>
+            <h7 class="card-subtitle mb-2 text-muted">{{s.addrState}}</h7>
+            <h7 class="card-subtitle mb-2 text-muted">{{s.addrZip}}</h7>
+            <h7 class="card-subtitle mb-2 text-muted">{{s.addrCountry}}</h7>
+            <p class="card-text">{{s.siteDescription}}</p>
+            </div>
+          </div>
 
           <div class="card" style="width: 80%;">
           <div class="card-body">
