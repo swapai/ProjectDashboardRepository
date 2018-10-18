@@ -34,15 +34,15 @@
         <div class="card" style="width: 80%;" v-for="s in siteList">
         <div class="card-body">
             <h4 class="card-title"><a href="turbine.html">{{s.siteName}}</a></h4>
-            <h5 class="card-subtitle mb-2 text-muted">{{s.primaryContact}}</h5>
-            <h5 class="card-subtitle mb-2 text-muted">{{s.capacity}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{s.commercialDate}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">{{s.addrLine1}} {{s.addrLine2}}</h6>
+            <h5 class="card-subtitle mb-2 text-muted">Primary Contact: {{s.primaryContact}}</h5>
+            <h5 class="card-subtitle mb-2 text-muted">Site Capacity: {{s.capacity}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Commerical Date: {{s.commercialDate}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Address: {{s.addrLine1}} {{s.addrLine2}}</h6>
             <h6 class="card-subtitle mb-2 text-muted">{{s.addrCity}}</h6>
             <h6 class="card-subtitle mb-2 text-muted">{{s.addrState}}</h6>
             <h6 class="card-subtitle mb-2 text-muted">{{s.addrZip}}</h6>
             <h6 class="card-subtitle mb-2 text-muted">{{s.addrCountry}}</h6>
-            <p class="card-text">{{s.siteDescription}}</p>
+            <p class="card-text">Description: {{s.siteDescription}}</p>
             </div>
           </div>
         </div>
