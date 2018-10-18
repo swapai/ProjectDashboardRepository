@@ -20,7 +20,7 @@ if ($clientId < 1) {
 //   echo $json;
 //   exit;
 // }
-$sites = Site::getSiteBySiteId($clientId);
+$sites = Site::getSiteByClientId($clientId);
 $json = json_encode($sites, JSON_PRETTY_PRINT);
 // 3. Print
 header('Content-Type: application/json');
