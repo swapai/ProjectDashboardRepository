@@ -5,6 +5,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   require 'sitePost.php';
   exit;
 }
+
+$clientId = intval($_GET['clientId'] ?? 0);
+
+if ($clientId < 1) {
+  throw new Exception('Invalid Client ID');
+}
 // $clientId = intval($_GET['clientId'] ?? 0);
 // if ($clientId >= 1) {
 //   $clientArr = Client::getClientByClientId($clientId);
@@ -14,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //   echo $json;
 //   exit;
 // }
-$sites = Site::fetchAll();
+$sites = Site::getSiteByClientId($clientId);
 $json = json_encode($sites, JSON_PRETTY_PRINT);
 // 3. Print
 header('Content-Type: application/json');
