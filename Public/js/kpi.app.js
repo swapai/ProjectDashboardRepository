@@ -21,7 +21,8 @@ var kpiApp = new Vue({
                 text: 'Cumulative Sensor Output'
             },
             xAxis: {
-                type: 'datetime'
+                type: 'datetime',
+                text: 'Date'
             },
             yAxis: {
                 title: {
@@ -62,7 +63,7 @@ var kpiApp = new Vue({
                 type: 'area',
                 name: 'Hours (Running Total)',
                 // Data needs [ [date, num], [date2, num2 ], ... ]
-                data: kpiList.map( item => [item.dataCollectiveDate, item.output] )
+                data: this.kpiList.map( item => [item.dataCollectiveDate, item.output] )
             }]
         });
   }
