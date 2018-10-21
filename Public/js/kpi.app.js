@@ -62,7 +62,7 @@ var kpiApp = new Vue({
                 type: 'area',
                 name: 'Hours (Running Total)',
                 // Data needs [ [date, num], [date2, num2 ], ... ]
-                data: this.kpiList.map( item => [item.dataCollectiveDate, item.output] )
+                data: kpiList.map( item => [item.dataCollectiveDate, item.output] )
             }]
         });
   }
