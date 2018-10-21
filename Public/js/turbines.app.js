@@ -26,7 +26,6 @@ var turbinesApp = new Vue({
     const siteId = url.searchParams.get('siteId');
     console.log('Site Id: '+ siteId);
     this.turbine.siteId = siteId;
-
     fetch('api/turbineDeployed.php?siteId='+siteId)
     .then( response => response.json() )
     .then( json => {turbinesApp.turbineList = json} )

@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $siteId = intval($_GET['siteId'] ?? 0);
 if ($siteId < 1) {
-  throw new Exception('Invalid Client ID');
+  throw new Exception('Invalid Site ID');
 }
 
 
