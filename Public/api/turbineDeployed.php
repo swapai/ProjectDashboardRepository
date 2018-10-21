@@ -7,15 +7,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   exit;
 }
 
-//$Id = intval($_GET['id'] ?? 0);
-
-//if ($Id < 1) {
-  //throw new Exception('Invalid ID');
-//}
+$siteId = intval($_GET['siteId'] ?? 0);
+if ($siteId < 1) {
+  throw new Exception('Invalid Client ID');
+}
 
 
 // 1. Go to the database and get all work associated with the $taskId
-$turbineDeployedArr = TurbineDeployed::getTurbineDeployed();
+$turbineDeployedArr = TurbineDeployed::getFullTurbineInformationFromSiteId($siteId);
 // 2. Convert to JSON
 $json = json_encode($turbineDeployedArr, JSON_PRETTY_PRINT);
 // 3. Print
