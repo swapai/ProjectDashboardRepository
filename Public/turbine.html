@@ -30,13 +30,13 @@
         <div class="card" style="width: 80%;" v-for="t in turbineList">
         <div class="card-body">
             <h4 class="card-title"> Serial Number: {{t.serialNumber}}</h4><br/>
-            <h5 class="card-subtitle mb-2 text-muted">Turbine Name: {{t.turbineName}}</h5>
             <h5 class="card-subtitle mb-2 text-muted">Deployed Date: {{t.deployedDate}}</h5>
             <h5 class="card-subtitle mb-2 text-muted">Total Fired Hours: {{t.totalFiredHours}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">Total Starts: {{t.totalStarts}}</h6>
             <h6 class="card-subtitle mb-2 text-muted">Last Planned Outage Date: {{t.lastPlannedOutageDate}}</h6>
             <h6 class="card-subtitle mb-2 text-muted"> Last Unplanned Outage Date: {{t.lastUnplannedOutageDate}}</h6><br/>
               <h5 class="card-title"> Basic Turbine Information</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Turbine Name: {{t.turbineName}}</h6>
             <h6 class="card-subtitle mb-2 text-muted">Capacity: {{t.capacity}}</h6>
             <h6 class="card-subtitle mb-2 text-muted">Ramp Up Time: {{t.rampUpTime}}</h6>
             <h6 class="card-subtitle mb-2 text-muted">Maintenance Interval: {{t.maintenanceInterval}}}</h6>
