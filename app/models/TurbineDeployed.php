@@ -109,7 +109,7 @@ class TurbineDeployed
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
             // 4.a. For each row, make a new work object
             $turbineDeployedItem =  new TurbineDeployed($row);
-            array_push($arr, $turbinDeployedeItem);
+            array_push($arr, $turbineDeployedItem);
           }
             return $arr;
         }
