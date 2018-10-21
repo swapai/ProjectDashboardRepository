@@ -84,16 +84,10 @@ body {
 }
 
 .homebutton{
-  font-size:20pt;
-  padding-right:10px;
-  padding-top:20px;
-  color: #999999;
-}
-
-#homebutton{
   margin:14px;
   font-size:16pt;
 }
+
 
 .pagetitle {
   padding-left:10px;
