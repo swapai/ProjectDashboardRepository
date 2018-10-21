@@ -1,6 +1,21 @@
 var sitesApp = new Vue({
   el: '#siteMain',
   data: {
+    site: {
+      siteId: 0,
+      clientId: 0,
+      siteName : '',
+      siteDescription : '',
+      primaryContact : '',
+      capacity: '',
+      commercialDate: '',
+      addrLine1: '',
+      addrLine2: '',
+      addrCity: '',
+      addrState : '',
+      addrZip: '',
+      addrCountry: ''
+    },
   siteList: []
 },
 
@@ -8,8 +23,8 @@ var sitesApp = new Vue({
 
     const url = new URL(window.location.href);
     const clientId = url.searchParams.get('clientId');
-    console.log('Client: '+ clientId);
-    this.siteList.clientId = clientId;
+    console.log('Client Id: '+ clientId);
+    this.site.clientId = clientId;
 
     fetch('api/site.php?clientId='+clientId)
     .then( response => response.json() )
