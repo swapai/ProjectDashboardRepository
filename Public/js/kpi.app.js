@@ -15,6 +15,16 @@ var kpiApp = new Vue({
     },
   kpiList: []
 },methods:{
+  fetchSensorTimeSeriesData (sensorDeployedId) {
+    fetch('api/sensortimeseries.php?sensorDeployedId='+sensorDeployedId)
+    .then( response => response.json() )
+    .then( json => {kpiApp.kpiList = json} )
+    .catch( err => {
+      console.error('SITE FETCH ERROR:');
+      console.error(err);
+    })
+    this.buildOutputChart();
+   },
   buildOutputChart(){
       Highcharts.chart('outputChart', {
             title: {
@@ -62,7 +72,7 @@ var kpiApp = new Vue({
                 type: 'area',
                 name: 'Hours (Running Total)',
                 // Data needs [ [date, num], [date2, num2 ], ... ]
-                data: this.kpiList.map( item => [item.dataCollectiveDate, item.output] )
+                data: kpiApp.kpiList.map( item => [item.dataCollectiveDate, item.output] )
             }]
         });
   }
@@ -74,13 +84,6 @@ var kpiApp = new Vue({
     console.log('SensorDeployed Id: '+ sensorDeployedId);
     this.kpi.sensorDeployedId = sensorDeployedId;
 
-    fetch('api/sensortimeseries.php?sensorDeployedId='+sensorDeployedId)
-    .then( response => response.json() )
-    .then( json => {kpiApp.kpiList = json} )
-    .catch( err => {
-      console.error('SITE FETCH ERROR:');
-      console.error(err);
-    })
-    this.buildOutputChart();
+  fetchSensorTimeSeriesData (sensorDeployedId);
   }
 })
