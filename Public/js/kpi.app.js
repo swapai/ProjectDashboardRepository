@@ -22,7 +22,6 @@ var kpiApp = new Vue({
             },
             xAxis: {
                 type: 'datetime',
-                text: 'Date'
             },
             yAxis: {
                 title: {
