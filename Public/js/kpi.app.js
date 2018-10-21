@@ -84,6 +84,6 @@ var kpiApp = new Vue({
     console.log('SensorDeployed Id: '+ sensorDeployedId);
     this.kpi.sensorDeployedId = sensorDeployedId;
 
-  fetchSensorTimeSeriesData (sensorDeployedId);
+  this.fetchSensorTimeSeriesData (sensorDeployedId);
   }
 })
