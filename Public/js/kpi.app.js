@@ -81,5 +81,6 @@ var kpiApp = new Vue({
       console.error('SITE FETCH ERROR:');
       console.error(err);
     })
+    this.buildOutputChart();
   }
 })
