@@ -20,8 +20,8 @@ var turbinesApp = new Vue({
   turbineList: []
 },
 methods: {
-gotoSensor(tid) {
-  window.location = 'sensor.html?turbineDeployedId=' + tid;
+gotoSensor(tid, seid) {
+  window.location = 'sensor.html?turbineDeployedId=' + tid + '&serialNumber=' + seid ;
 }
 },
 
