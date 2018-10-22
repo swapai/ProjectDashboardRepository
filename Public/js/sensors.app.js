@@ -25,7 +25,7 @@ var senosorApp = new Vue({
     this.turbineSerialNumber = turbineSerialNumber;
     fetch('api/sensordeployed.php?turbineDeployedId='+turbineDeployedId)
     .then( response => response.json() )
-    .then( json => {senorApp.sensorList = json} )
+    .then( json => {sensorApp.sensorList = json} )
     .catch( err => {
       console.error('SITE FETCH ERROR:');
       console.error(err);
