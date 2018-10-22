@@ -29,28 +29,7 @@
         <h5 class="card-title">Turbine Serial Number: {{turbineSerialNumber}}</h5>
         <div class="card" style="width: 80%;" >
         <div class="card-body">
-          <table class="table table-striped">
-            <thead>
-              <th>Senor Serial Number</th>
-              <th>Sensor Deployed Date</th>
-              <th>Sensor Name</th>
-              <th>Sensor Description</th>
-              <th>Sensor Manufacturer</th>
-              <th>Total Life Expentancy Hours</th>
-            </thead>
-            <tbody>
-              <tr v-for="s in sensorList">
-                <th>{{s.serialNumber}}</th>
-                <th>{{s.deployedDate}}</th>
-                <th>{{s.sensorName}}</th>
-                <th>{{s.sensorDescription}}</th>
-                <th> {{s.manufacturer}}</th>
-                <th>{{s.totalLifeExpentancyHours}}</th>
-              </tr>
-            </tbody>
-          </table>
             <h4 class="card-title">Sensor Serial Number: {{s.serialNumber}}</h4><br/>
-
             <h5 class="card-subtitle mb-2 text-muted">Deployed Date: {{s.deployedDate}}</h5><br />
                 <h5 class="card-title"> Basic Sensor Information</h5>
             <h6 class="card-subtitle mb-2 text-muted">Sensor Name: {{s.sensorName}}</h6>
@@ -60,39 +39,7 @@
               <a class="btn btn-primary" href="KPI.html" role="button">Sensor Time Series Data</a>
           </div>
         </div>
-
       </div>
-
-        <div class="card" style="width: 80%;">
-        <div class="card-body">
-        <h5 class="card-title">Turbine Deploy ID: <a href="turbine.html">9HA-01-IU0008</a></h5>
-        <h4 class="card-title"><a class="link" href="turbine.html">Sensor Deployed Information</a></h4>
-
-        <p class="card-text">
-          <table class="table table-striped">
-            <thead>
-              <th>Senor Serial Number</th>
-              <th>Sensor Deployed Date</th>
-              <th>Sensor Name</th>
-              <th>Sensor Description</th>
-              <th>Sensor Manufacturer</th>
-              <th>Total Life Expentancy Hours</th>
-            </thead>
-
-            <tbody>
-            <tr>
-              <td><a href="KPI.html" class="turbineLink">LVDT-IU0001</a></td>
-              <td>3/19/2014</td>
-              <td>LVDT</td>
-              <td>LVDTs (Linear Variable Differential Transformers) are very commonly used as position sensors in power plants throughout the world.</td>
-              <td>Alliance Sensors Group</td>
-              <td>1000</td>
-            </tr>
-            </tbody>
-          </table>
-        </p>
-        </div>
-        </div>
     </main>
 </div>
 
