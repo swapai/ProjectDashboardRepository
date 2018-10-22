@@ -19,7 +19,11 @@ var turbinesApp = new Vue({
     },
   turbineList: []
 },
-
+methods: {
+gotoSensor(tid) {
+  window.location = 'sensor.html?turbineDeployedId=' + tid;
+}
+},
 
   created (){
 
