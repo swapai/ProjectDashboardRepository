@@ -25,6 +25,7 @@ var kpiApp = new Vue({
     })
     this.buildOutputChart();
    },
+
   buildOutputChart(){
       Highcharts.chart('outputChart', {
             title: {

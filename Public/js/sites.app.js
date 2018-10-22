@@ -19,6 +19,12 @@ var sitesApp = new Vue({
   siteList: []
 },
 
+methods: {
+gotoTurbine(sid) {
+  window.location = 'turbine.html?siteId=' + sid;
+}
+},
+
   created (){
 
     const url = new URL(window.location.href);
