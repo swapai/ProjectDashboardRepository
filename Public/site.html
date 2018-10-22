@@ -34,7 +34,7 @@
 
         <div class="card" style="width: 80%;" v-for="s in siteList">
         <div class="card-body">
-            <h4 class="card-title"><a  @click="gotoTurbine(s.siteId)">{{s.siteName}}</a></h4>
+            <h4 class="card-title"><a href="#" @click="gotoTurbine(s.siteId)">{{s.siteName}}</a></h4>
             <h5 class="card-subtitle mb-2 text-muted">Primary Contact: {{s.primaryContact}}</h5>
             <h5 class="card-subtitle mb-2 text-muted">Site Capacity: {{s.capacity}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">Commerical Date: {{s.commercialDate}}</h6><br/>
