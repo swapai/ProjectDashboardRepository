@@ -12,15 +12,17 @@ var senosorApp = new Vue({
       serialNumber:'',
       deployedDate:''
     },
-  sensorList: []
+    turbineSerialNumber:'',
+    sensorList: []
 },
 
   created (){
-
     const url = new URL(window.location.href);
     const turbineDeployedId = url.searchParams.get('turbineDeployedId');
+    const turbineSerialNumber = url.searchParams.get('serialNumber');
     console.log('Turbine Deployed Id: '+ turbineDeployedId);
     this.sensor.turbineDeployedId = turbineDeployedId;
+    this.turbineSerialNumber = turbineSerialNumber;
     fetch('api/sensordeployed.php?turbineDeployedId='+turbineDeployedId)
     .then( response => response.json() )
     .then( json => {senorApp.sensorList = json} )
