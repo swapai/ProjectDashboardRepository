@@ -15,6 +15,11 @@ var sensorApp = new Vue({
     turbineSerialNumber:'',
     sensorList: []
 },
+methods: {
+  gotoKPI(sid) {
+    window.location = 'KPI.html?sensorDeployedId=' + sid;
+  }
+},
 
   created (){
     const url = new URL(window.location.href);
