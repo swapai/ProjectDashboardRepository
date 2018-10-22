@@ -1,4 +1,4 @@
-var senosorApp = new Vue({
+var sensorApp = new Vue({
   el: '#sensorMain',
   data: {
     sensor: {
