@@ -18,12 +18,15 @@ var kpiApp = new Vue({
   fetchSensorTimeSeriesData (sensorDeployedId) {
     fetch('api/sensortimeseries.php?sensorDeployedId='+sensorDeployedId)
     .then( response => response.json() )
-    .then( json => {kpiApp.kpiList = json} )
+    .then( json => {
+      kpiApp.kpiList = json;
+      this.buildOutputChart();
+    } )
     .catch( err => {
       console.error('SITE FETCH ERROR:');
       console.error(err);
     })
-    this.buildOutputChart();
+
    },
 
   buildOutputChart(){
