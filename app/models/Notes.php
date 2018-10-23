@@ -34,7 +34,7 @@ class Notes{
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     // 2. Prepare the query
-    $sql = 'SELECT * FROM notesId WHERE clientId = ?';
+    $sql = 'SELECT * FROM Notes WHERE clientId = ?';
     $statement = $db->prepare($sql);
     // 3. Run the query
     $success = $statement->execute(
