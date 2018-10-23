@@ -1,6 +1,12 @@
 var NotesApp = new Vue({
   el: '#notesMain',
   data: {
+    notes: {
+      notesId: 0,
+      clientId: 0,
+      clientName: '',
+      notes: ''
+    },
 
     notesForm: { },   // populated by this.getEmptyWorkForm()
     notesList: []
