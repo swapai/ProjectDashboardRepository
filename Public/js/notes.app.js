@@ -18,8 +18,14 @@ var notesApp = new Vue({
       const s = JSON.stringify(this.notesForm);
 
             console.log(s);
+            
+      const url = new URL(window.location.href);
+      const clientId = url.searchParams.get('clientId');
+      console.log('Client Id: '+ clientId);
+      this.notes.clientId = clientId;
 
-      fetch('api/notes.php', {
+      fetch('api/notes.php?clientId=' +clientId,
+       {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
             "Content-Type": "application/json; charset=utf-8"
