@@ -19,12 +19,8 @@ var notesApp = new Vue({
 
             console.log(s);
             
-      const url = new URL(window.location.href);
-      const clientId = url.searchParams.get('clientId');
-      console.log('Client Id: '+ clientId);
-      this.notes.clientId = clientId;
 
-      fetch('api/notes.php?clientId=' +clientId,
+      fetch('api/notes.php',
        {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
