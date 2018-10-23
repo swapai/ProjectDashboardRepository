@@ -1,4 +1,4 @@
-var NotesApp = new Vue({
+var notesApp = new Vue({
   el: '#notesMain',
   data: {
     notes: {
@@ -56,7 +56,7 @@ var NotesApp = new Vue({
     // fetch('api/task?id=4')
     fetch('api/notes.php?clientId='+clientId)
     .then( response => response.json() )
-    .then( json => {notessApp.notesList = json} )
+    .then( json => {notesApp.notesList = json} )
     .catch( err => {
       console.error('NOTES FETCH ERROR:');
       console.error(err);
