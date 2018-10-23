@@ -26,9 +26,9 @@
       </div>
 
 
-    <main id="clientMain">
+    <main>
 
-      <div class="card">
+      <div class="card" id="notesMain">
 
         <h3>Notes</h3>
             <table class="table table-striped">
@@ -40,7 +40,7 @@
               </thead>
               <tbody>
                 <tr v-for="n in notesList">
-                <td>{{n.id}}</td>
+                <td>{{n.notesId}}</td>
                 <td>{{n.notes}}</td>
                 </tr>
               </tbody>
@@ -52,9 +52,9 @@
       <div class="card-body">
     <h3>Add New Notes</h3>
 
-            <form @submit.prevent="handleNoteForm">
+            <form @submit.prevent="handleNotesForm">
               <div class="form-group row">
-                  <textarea rows="10" cols="45" id="note" v-model="noteForm.note"></textarea>
+                  <textarea rows="10" cols="45" id="note" v-model="notesForm.note"></textarea>
               </div>
 
               <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->

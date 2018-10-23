@@ -6,6 +6,10 @@ var clientsApp = new Vue({
 methods: {
   gotoSite(cid) {
     window.location = 'site.html?clientId=' + cid;
+  },
+
+  gotoNotes(cid) {
+    window.location = 'notes.html?clientId=' + cid;
   }
 },
   created (){
