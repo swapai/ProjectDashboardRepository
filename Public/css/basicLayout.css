@@ -39,6 +39,11 @@ h1, h2, h3, h4, h5 {
   color:#078e0f;
 }
 
+.loginlabel {
+  color:#078e0f;
+  font-size: 20px;
+}
+
 textarea {
   margin-bottom: 10px;
 
@@ -84,19 +89,27 @@ body {
 }
 
 .homebutton{
+  font-size:20pt;
+  padding-right:10px;
+  padding-top:20px;
+  color: #999999;
+}
+
+#homebutton{
   margin:14px;
   font-size:16pt;
 }
-
 
 .pagetitle {
   padding-left:10px;
 }
 
 .btn-primary {
-    color: white;
-    background-color: #999999;
-    border-color: #999999
+    color:white;
+    background-color:#078e0f;
+    border-color: #078e0f;
+    font-size:18px;
+    margin:15px;
 }
 
 .container {
@@ -206,3 +219,82 @@ body {
 .turbineLink{
   font-size:12px;
 }
+
+.split {
+  height: 100%;
+  width: 56%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-image: url("images/turbine.jpg");
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #999;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+.fill {
+  width:100%;
+height:100%;
+object-fit: cover;
+overflow: hidden;
+}
+
+input[type=text], select {
+     width: 100%;
+     padding: 12px 20px;
+     margin: 20px 0;
+     display: inline-block;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+ }
+
+ input[type=password], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 20px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+  }
+
+ input[type=submit] {
+     width: 100%;
+     background-color:#078e0f;
+     font-size:18px;
+     color: white;
+     padding: 3px 20px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+ }
+
+ input[type=submit]:hover {
+     background-color: grey;
+ }
+
+ #logintitle {
+   font-size:60px;
+ }
