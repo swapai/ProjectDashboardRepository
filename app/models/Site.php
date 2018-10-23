@@ -54,11 +54,11 @@ class Site{
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     // 2. Prepare the query
-    $sql = 'SELECT * FROM site WHERE $clientId = ?';
+    $sql = 'SELECT * FROM site WHERE clientId = ?';
     $statement = $db->prepare($sql);
     // 3. Run the query
     $success = $statement->execute(
-        [$clientId]
+      [$clientId]
     );
     // 4. Handle the results
     $arr = [];

@@ -13,8 +13,13 @@
   <body>
     <div class="container-fluid">
       <header>
+<<<<<<< HEAD
         <a id="homebutton" class="btn btn-primary float-right" href="site.html" role="button">BACK</a>
         <a id="homebutton" class="btn btn-primary float-right" href="index.html" role="button">HOME</a>
+=======
+          <a class="btn btn-primary float-right homebutton" href="site.html" role="button">BACK</a>
+        <a class="btn btn-primary float-right homebutton" href="index.html" role="button">HOME</a>
+>>>>>>> be366dcbbb7ed2b8245ae36feee6421f5601cd9d
         <div id="headerdiv" class="row">
           <nav class="navbar navbar-expand-lg navbar-light" id="banner">
           <span id="headerName">Alternative Green System</span>
@@ -24,24 +29,26 @@
 
 
     <main>
-      <br/>
-      <h1> Turbine Information</h1>
-      <div class="card">
-        <h5 class="card-title">93SA.01</h5>
-          <div> Turbine Description : The 3SA high efficiency, deep-water tidal turbine is an industry leader among S-class offerings. </div>
-          <div> Capacity : 429 </div>
-          <div> Ramp Up Time : 12 </div>
-          <div> Maintenance Interval : 32000 </div>
-        <br />
-        <h5 class="card-title">Deployed Turbine Information</h5>
-          <div> Serial Number : 9HA-01-IU0008</div>
-          <div> Deployed Date : 7/1/2016 </div>
-          <div> Total Fired Hours : 3543 </div>
-          <div> Total Starts : 5 </div>
-          <div>Last Planned Outage Date : 6/1/2016</div>
-          <div> Last Unplanned Outage Date : N/A</div>
-          <br />
-          <a class="btn btn-primary" href="sensor.html" role="button">Sensor Deployment Information</a>
+      <div id="turbineMain">
+        <br/>
+        <h1> Turbine Information</h1>
+        <div class="card" style="width: 80%;" v-for="t in turbineList">
+        <div class="card-body">
+            <h4 class="card-title">Turbine Serial Number: {{t.serialNumber}}</h4><br/>
+            <h5 class="card-subtitle mb-2 text-muted">Deployed Date: {{t.deployedDate}}</h5>
+            <h5 class="card-subtitle mb-2 text-muted">Total Fired Hours: {{t.totalFiredHours}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Total Starts: {{t.totalStarts}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Last Planned Outage Date: {{t.lastPlannedOutageDate}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted"> Last Unplanned Outage Date: {{t.lastUnplannedOutageDate}}</h6><br/>
+              <h5 class="card-title"> Basic Turbine Information</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Turbine Name: {{t.turbineName}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Capacity: {{t.capacity}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Ramp Up Time: {{t.rampUpTime}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Maintenance Interval: {{t.maintenanceInterval}}</h6>
+            <p class="card-text">Description: {{t.turbineDescription}}</p>
+              <a class="btn btn-primary" @click="gotoSensor(t.turbineDeployedId, t.serialNumber)" role="button">Sensor Deployment Information</a>
+          </div>
+        </div>
       </div>
     </main>
 

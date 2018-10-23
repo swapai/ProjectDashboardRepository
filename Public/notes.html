@@ -28,22 +28,41 @@
 
     <main id="clientMain">
 
-      <div class="card" v-for="c in clientList">
+      <div class="card">
 
-          <div class="card-body" >
-          <h5 class="card-title">{{c.clientName}}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">{{c.gicsSector}} - {{c.gicsSubIndustry}}</h6>
-          <h6 class="card-subtitle mb-2 text-muted">{{c.headquarters}}</h6>
-          <p class="card-text">{{c.clientDescription}}</p>
-
-          <p>
-            <a class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</a>
-          </p>
+        <h3>Notes</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Notes Id</th>
+                  <th>Notes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="n in notesList">
+                <td>{{n.id}}</td>
+                <td>{{n.notes}}</td>
+                </tr>
+              </tbody>
+            </table>
       </div>
-      </div>
 
 
+      <div class="card" style="width: 80%;">
+      <div class="card-body">
+    <h3>Add New Notes</h3>
 
+            <form @submit.prevent="handleNoteForm">
+              <div class="form-group row">
+                  <textarea rows="10" cols="45" id="note" v-model="noteForm.note"></textarea>
+              </div>
+
+              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+              <button type="submit" class="btn btn-primary" id="submitNewNote">Add New Notes</button>
+            </form>
+
+  </div>
+  </div>
     </main>
 
 
@@ -54,7 +73,7 @@
     <!-- development version, includes helpful console warnings -->
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-        <script src="js/index.app.js"></script>
+        <script src="js/notes.app.js"></script>
 
   </body>
 </html>
