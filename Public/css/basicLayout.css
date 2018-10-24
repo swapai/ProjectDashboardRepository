@@ -104,6 +104,11 @@ body {
   border:#999999;
    }
 
+button:hover {
+  background-color: grey;
+  border:#999999;
+    }
+
 .pagetitle {
   padding-left:10px;
 }
