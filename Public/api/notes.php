@@ -11,7 +11,7 @@ if ($clientId < 1) {
 }
 
 
-$notes = Notes::getNotesByClientsId($clientId);
+$notes = Notes::getNotesByClientId($clientId);
 $json = json_encode($notes, JSON_PRETTY_PRINT);
 // 3. Print
 header('Content-Type: application/json');
