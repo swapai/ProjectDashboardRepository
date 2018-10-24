@@ -125,7 +125,7 @@ body {
     margin-top:12px;
 }
 
-.clientbutton {
+#clientbutton {
   position: absolute;
   bottom: 5px;
 }

@@ -37,8 +37,8 @@
           <p class="card-text">{{c.clientDescription}}</p>
 
           <p>
-            <button class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</button>
-            <button class="btn btn-primary" @click="gotoNotes(c.clientId)" role="button">Client Notes</button>
+            <button id= "clientbutton" class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</button>
+            <button id= "clientbutton" class="btn btn-primary clientbutton" @click="gotoNotes(c.clientId)" role="button">Client Notes</button>
           </p>
       </div>
       </div>
