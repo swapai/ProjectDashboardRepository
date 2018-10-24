@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 //   echo $json;
 //   exit;
 // }
-$notes = Notes::getNotesByClientsId();
+$notes = Notes::getNotesByClientsId($clientId);
 $json = json_encode($notes, JSON_PRETTY_PRINT);
 // 3. Print
 header('Content-Type: application/json');
