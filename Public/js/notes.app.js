@@ -18,7 +18,7 @@ var notesApp = new Vue({
       const s = JSON.stringify(this.notesForm);
 
             console.log(s);
-            
+
 
       fetch('api/notes.php',
        {
@@ -55,7 +55,6 @@ var notesApp = new Vue({
     console.log('Client Id: '+ clientId);
     this.notes.clientId = clientId;
 
-    // fetch('api/task?id=4')
     fetch('api/notes.php?clientId='+clientId)
     .then( response => response.json() )
     .then( json => {notesApp.notesList = json} )
