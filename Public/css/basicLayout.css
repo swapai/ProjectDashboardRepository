@@ -101,12 +101,14 @@ body {
 
 #homebutton:hover {
   background-color: grey;
-  border:#999999;
+  border:none;
+  cursor: pointer;
    }
 
 .btn-primary:hover {
   background-color: grey;
-  border:#999999;
+  border:none;
+  cursor: pointer;
     }
 
 .pagetitle {
