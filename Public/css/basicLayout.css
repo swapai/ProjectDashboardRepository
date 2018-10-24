@@ -32,9 +32,7 @@ body {
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
 
-  button:hover {
-    color: grey;
-    text-decoration: underline; }
+
 
 h1, h2, h3, h4, h5 {
   color:#078e0f;
@@ -100,6 +98,11 @@ body {
   margin:14px;
   font-size:16pt;
 }
+
+#homebutton:hover {
+  background-color: grey;
+  border:#999999;
+   }
 
 .pagetitle {
   padding-left:10px;
