@@ -104,7 +104,7 @@ body {
   border:#999999;
    }
 
-button:hover {
+.btn-primary:hover {
   background-color: grey;
   border:#999999;
     }
