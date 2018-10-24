@@ -127,12 +127,12 @@ body {
 
 #clientbutton {
   position: absolute;
-  bottom: 5px;
+  bottom: 60px;
 }
 
 #notesbutton {
   position: absolute;
-  bottom: 60px;
+  bottom: 5px;
 }
 
 .container {
