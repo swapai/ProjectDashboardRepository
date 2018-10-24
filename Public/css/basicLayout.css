@@ -130,6 +130,11 @@ body {
   bottom: 5px;
 }
 
+#notesbutton {
+  position: absolute;
+  bottom: 20px;
+}
+
 .container {
   margin: 50px 0 0 100px;
 }
