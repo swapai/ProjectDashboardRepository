@@ -30,11 +30,11 @@ class Notes{
     return $arr;
   }
 
-  public static function getNotesByNotesId(int $notesId) {
+  public static function getNotesByClientsId(int $clientId) {
     // 1. Connect to the database
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     // 2. Prepare the query
-    $sql = 'SELECT * FROM Notes WHERE clientId = ?';
+    $sql = 'SELECT * FROM notes WHERE clientId = ?';
     $statement = $db->prepare($sql);
     // 3. Run the query
     $success = $statement->execute(
