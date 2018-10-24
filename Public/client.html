@@ -28,9 +28,8 @@
     <main id="clientMain">
       <br/>
       <h1> Client Dashboard</h1>
+      <div class="card" v-for="c in clientList">
 
-      <div class="card-deck" v-for="c in clientList">
-          <div class="card">
           <div class="card-body" >
           <h5 class="card-title">{{c.clientName}}</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{c.gicsSector}} - {{c.gicsSubIndustry}}</h6>
@@ -41,7 +40,6 @@
             <button class="btn btn-primary clientbuttons" @click="gotoSite(c.clientId)" role="button">Client Sites</button>
             <button class="btn btn-primary clientbuttons" @click="gotoNotes(c.clientId)" role="button">Client Notes</button>
           </p>
-      </div>
       </div>
       </div>
 
