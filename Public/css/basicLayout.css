@@ -31,8 +31,9 @@ body {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects; }
-  a:hover {
-    color: #0d0d0d;
+
+  button:hover {
+    color: grey;
     text-decoration: underline; }
 
 h1, h2, h3, h4, h5 {
