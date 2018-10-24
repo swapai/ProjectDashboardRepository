@@ -7,7 +7,7 @@ var notesApp = new Vue({
       clientName: '',
       notes: ''
     },
-
+    notes: [],
     notesForm: { },   // populated by this.getEmptyWorkForm()
     notesList: []
   },
@@ -20,7 +20,7 @@ var notesApp = new Vue({
             console.log(s);
 
 
-      fetch('api/notes.php',
+      fetch('api/notes.php?',
        {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         headers: {
