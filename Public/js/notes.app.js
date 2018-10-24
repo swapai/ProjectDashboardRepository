@@ -1,28 +1,17 @@
 var notesApp = new Vue({
   el: '#notesMain',
   data: {
-    notes: {
-      notesId: 0,
-      clientId: 0,
-      clientName: '',
-      notes: ''
-    },
     notes: [],
     notesForm: { },   // populated by this.getEmptyWorkForm()
     notesList: []
   },
 
   methods: {
-    gotoNotesPost(cid) {
-      window.location = 'notes.html?clientId=' + cid;
-    },
-
     handleNotesForm(e) {
 
       const s = JSON.stringify(this.notesForm);
 
-            console.log(s);
-
+      console.log(s);
 
       fetch('api/notes.php?',
        {
@@ -33,7 +22,7 @@ var notesApp = new Vue({
         body: s // body data type must match "Content-Type" header
       })
       .then( response => response.json() )
-      .then( json => {this.notesList.push(json)})
+      .then( json => {notesApp.notesList.push(json)})
       .catch( err => {
         console.error('NOTES POST ERROR:');
         console.error(err);
