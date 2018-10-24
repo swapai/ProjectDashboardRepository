@@ -13,6 +13,11 @@ var notesApp = new Vue({
   },
 
   methods: {
+    gotoNotesPost(cid) {
+      window.location = 'notes.html?clientId=' + cid;
+    }
+  },
+
     handleNotesForm(e) {
 
       const s = JSON.stringify(this.notesForm);
