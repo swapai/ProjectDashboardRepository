@@ -127,7 +127,7 @@ body {
 
 .clientbuttons {
   width:100%;
-  margin-right: 5px;
+  justify-content: center;
 }
 
 .container {
