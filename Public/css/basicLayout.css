@@ -126,7 +126,8 @@ body {
 }
 
 .clientbutton {
-  vertical-align: bottom;
+  position: absolute;
+  bottom: 5px;
 }
 
 .container {
