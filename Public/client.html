@@ -16,7 +16,7 @@
   <body>
     <div class="container-fluid">
       <header>
-        <a class="btn btn-primary float-right homebutton" href="index.html" role="button">HOME</a>
+        <a class="btn btn-primary float-right homebutton" href="client.html" role="button">HOME</a>
         <div id="headerdiv" class="row">
           <nav class="navbar navbar-expand-lg navbar-light" id="banner">
           <span id="headerName">Alternative Green System</span>
@@ -37,7 +37,7 @@
           <p class="card-text">{{c.clientDescription}}</p>
 
           <p>
-            <a class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</a>
+            <button class="btn btn-primary" @click="gotoSite(c.clientId)" role="button">Client Sites</button>
             <a class="btn btn-primary" @click="gotoNotes(c.clientId)" role="button">Client Notes</a>
           </p>
       </div>
