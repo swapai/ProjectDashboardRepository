@@ -3,7 +3,7 @@
   color: #999999;
 
   height: 70px;
-padding-bottom: ;
+padding-bottom: 5px;
 width: 100%;}
 
 #headerName{
@@ -222,6 +222,7 @@ body {
   display:inline-block;
   padding: 10px;
   width: 25rem;
+  vertical-align: top;
 }
 
 .navBoxes{
