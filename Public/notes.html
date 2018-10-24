@@ -30,17 +30,16 @@
 
       <div class="card" id="notesMain">
 
-        <h3>Notes</h3>
+        <h1> Notes</h1>
+        <h5 class="card-title">Client Name: </h5>
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <!-- <th>Client Name</th> -->
                   <th>Notes</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="n in notesList">
-                <!-- <td>{{n.clientName}}</td> -->
                 <td>{{n.notes}}</td>
                 </tr>
               </tbody>
@@ -52,8 +51,6 @@
                     <div class="form-group row">
                         <textarea rows="10" cols="30" id="note" v-model="notesForm.notes"></textarea>
                     </div>
-
-                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
                     <button type="submit" class="btn btn-primary" id="submitNewNote">Add New Notes</button>
                   </form>
                 </div>

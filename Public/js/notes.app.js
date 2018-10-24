@@ -1,7 +1,6 @@
 var notesApp = new Vue({
   el: '#notesMain',
   data: {
-    notes: [],
     notesForm: { },   // populated by this.getEmptyWorkForm()
     notesList: []
   },
