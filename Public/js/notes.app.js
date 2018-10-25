@@ -46,7 +46,7 @@ var notesApp = new Vue({
     const url = new URL(window.location.href);
     const clientId = url.searchParams.get('clientId');
     console.log('Client Id: '+ clientId);
-    this.notes.clientId = clientId;
+    this.clientId = clientId;
 
     fetch('api/notes.php?clientId='+clientId)
     .then( response => response.json() )
