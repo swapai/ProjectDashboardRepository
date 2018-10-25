@@ -3,7 +3,7 @@ var notesApp = new Vue({
   data: {
     notesForm: { },   // populated by this.getEmptyWorkForm()
     notesList: [],
-    client: [],
+    client: []
 
   },
 
