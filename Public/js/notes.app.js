@@ -1,7 +1,6 @@
 var notesApp = new Vue({
   el: '#notesMain',
   data: {
-    notes: [],
     notesForm: { },   // populated by this.getEmptyWorkForm()
     notesList: []
   },
@@ -47,7 +46,7 @@ var notesApp = new Vue({
     const url = new URL(window.location.href);
     const clientId = url.searchParams.get('clientId');
     console.log('Client Id: '+ clientId);
-    this.clientId = clientId;
+    this.notes.clientId = clientId;
 
     fetch('api/notes.php?clientId='+clientId)
     .then( response => response.json() )
