@@ -8,8 +8,8 @@ methods: {
     window.location = 'site.html?clientId=' + cid;
   },
 
-  gotoNotes(cid) {
-    window.location = 'notes.html?clientId=' + cid;
+  gotoNotes(cid, cname) {
+    window.location = 'notes.html?clientId=' + cid + '&cleintName=' + cname ;
   }
 },
   created (){
