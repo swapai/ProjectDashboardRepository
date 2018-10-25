@@ -1,10 +1,9 @@
 var notesApp = new Vue({
   el: '#notesMain',
   data: {
+    notes: [],
     notesForm: { },   // populated by this.getEmptyWorkForm()
-    notesList: [],
-    client: []
-
+    notesList: []
   },
 
   methods: {
@@ -53,14 +52,6 @@ var notesApp = new Vue({
     fetch('api/notes.php?clientId='+clientId)
     .then( response => response.json() )
     .then( json => {notesApp.notesList = json} )
-    .catch( err => {
-      console.error('NOTES FETCH ERROR:');
-      console.error(err);
-    })
-
-    fetch('api/client.php')
-    .then( response => response.json() )
-    .then( json => {notesApp.client = json} )
     .catch( err => {
       console.error('NOTES FETCH ERROR:');
       console.error(err);
