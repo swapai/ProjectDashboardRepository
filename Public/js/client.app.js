@@ -9,7 +9,7 @@ methods: {
   },
 
   gotoNotes(cid, cname) {
-    window.location = 'notes.html?clientId=' + cid + '&cleintName=' + cname ;
+    window.location = 'notes.html?clientId=' + cid + '&clientName=' + cname ;
   }
 },
   created (){
