@@ -118,7 +118,9 @@ buildCompressorEfficiencyChart(){
     yAxis: {
             title: {
                 text: 'Compressor Efficiency (%)'
-            }
+            },
+            min: 0,
+            max: 100,
         },
         legend: {
             layout: 'vertical',
