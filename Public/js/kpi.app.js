@@ -22,6 +22,7 @@ var kpiApp = new Vue({
       kpiApp.kpiList = json;
       this.buildOutputChart();
       this.buildHeatRateChart();
+      this.buildCompressorEfficiencyChart();
     } )
     .catch( err => {
       console.error('SITE FETCH ERROR:');
@@ -109,6 +110,42 @@ var kpiApp = new Vue({
       name: 'Heat Rate (kWh)',
       // Data needs [ [date, num], [date2, num2 ], ... ]
       data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.heatRate)] )
+    }]
+})
+},
+buildCompressorEfficiencyChart(){
+  Highcharts.chart('compressorEfficiencyChart', {
+
+    xAxis: {
+        type: 'datetime',
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        max: 100,
+        title: {
+            text: 'Efficiency (%)'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        type: 'column',
+        name: 'Compressor Efficiency (%)',
+        // Data needs [ [date, num], [date2, num2 ], ... ]
+        data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.compressorEfficiency)] )
     }]
 })
 }
