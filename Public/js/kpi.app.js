@@ -115,6 +115,9 @@ var kpiApp = new Vue({
 },
 buildCompressorEfficiencyChart(){
   Highcharts.chart('compressorEfficiencyChart', {
+    title: {
+        text: 'Compressor Efficiency Chart'
+    },
     yAxis: {
             title: {
                 text: 'Compressor Efficiency (%)'
@@ -131,7 +134,7 @@ buildCompressorEfficiencyChart(){
         plotOptions: {
             series: {
                 label: {
-                    connectorAllowed: false
+                    connectorAllowed: true
                 }
             }
         },
