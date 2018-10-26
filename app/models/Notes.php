@@ -3,7 +3,6 @@
 class Notes{
   public $notesId;
   public $clientId;
-  public $clientName;
   public $notes;
 
 
@@ -53,12 +52,11 @@ class Notes{
 
   public function create() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-    $sql = 'INSERT into notes (clientId, clientName, notes)
-            VALUES (?,?,?)';
+    $sql = 'INSERT into notes (clientId, notes)
+            VALUES (?,?)';
     $statement = $db->prepare($sql);
     $success = $statement->execute([
       $this->clientId,
-      $this->clientName,
       $this->notes
     ]);
     $this->notesId = $db->lastInsertId();
