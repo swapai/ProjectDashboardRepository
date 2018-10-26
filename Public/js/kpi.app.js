@@ -84,14 +84,6 @@ var kpiApp = new Vue({
   buildHeatRateChart(){
     Highcharts.chart('heatRateChart', {
 
-    chart: {
-        type: 'gauge',
-        plotBackgroundColor: null,
-        plotBackgroundImage: null,
-        plotBorderWidth: 0,
-        plotShadow: false
-    },
-
     title: {
         text: 'Sensor Heat Rate'
     },
@@ -168,6 +160,7 @@ var kpiApp = new Vue({
     },
 
     series: [{
+      type: 'gauge',
         name: 'heatRate',
         data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.heatRate)] ),
         tooltip: {
@@ -175,6 +168,24 @@ var kpiApp = new Vue({
         }
     }]
 
+},
+// Add some life
+function (chart) {
+    if (!chart.renderer.forExport) {
+        setInterval(function () {
+            var point = chart.series[0].points[0],
+                newVal,
+                inc = Math.round((Math.random() - 0.5) * 20);
+
+            newVal = point.y + inc;
+            if (newVal < 0 || newVal > 200) {
+                newVal = point.y - inc;
+            }
+
+            point.update(newVal);
+
+        }, 3000);
+    }
 });
   }
 },
