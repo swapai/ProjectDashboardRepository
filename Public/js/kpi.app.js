@@ -135,11 +135,24 @@ buildCompressorEfficiencyChart(){
         },
 
     series: [{
-        type: 'column',
         name: 'Compressor Efficiency (%)',
         // Data needs [ [date, num], [date2, num2 ], ... ]
         data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.compressorEfficiency)] )
-    }]
+    }],
+    responsive: {
+       rules: [{
+           condition: {
+               maxWidth: 500
+           },
+           chartOptions: {
+               legend: {
+                   layout: 'horizontal',
+                   align: 'center',
+                   verticalAlign: 'bottom'
+               }
+           }
+       }]
+     }
 })
 }
 
