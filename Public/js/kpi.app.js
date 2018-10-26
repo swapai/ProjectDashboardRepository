@@ -100,13 +100,13 @@ var kpiApp = new Vue({
     plotOptions: {
         line: {
             dataLabels: {
-                enabled: true
+                enabled: false
             },
             enableMouseTracking: false
         }
     },
     series: [{
-      name: 'Hours (Running Total)',
+      name: 'Heat Rate (kWh)',
       // Data needs [ [date, num], [date2, num2 ], ... ]
       data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.heatRate)] )
     }]
