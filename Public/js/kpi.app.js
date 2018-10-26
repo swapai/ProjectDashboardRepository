@@ -122,8 +122,6 @@ buildCompressorEfficiencyChart(){
             title: {
                 text: 'Compressor Efficiency (%)'
             },
-            min: 80,
-            max: 100,
         },
         legend: {
             layout: 'vertical',
