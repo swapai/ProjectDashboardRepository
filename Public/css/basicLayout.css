@@ -135,6 +135,12 @@ body {
   bottom: 5px;
 }
 
+#singlebutton {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+}
+
 .container {
   margin: 50px 0 0 100px;
 }
