@@ -26,10 +26,10 @@
       </div>
 
 
-    <main>
+    <main id="siteMain">
 
-      <div>
-        <div  id="siteMain">
+
+        <div>
           <br/>
           <h1 class="pagetitle">Site Information</h1>
         <div class="card" style="width: 80%;" v-for="s in siteList">
@@ -47,13 +47,11 @@
             <p class="card-text">Description: {{s.siteDescription}}</p>
             </div>
 
-          </div>
-          <div class="card-body" v-if="siteList==null">
-              <h4 id="unavailabledata" class="card-title">No Sites Currently Available</h4>
-          </div>
-
         </div>
-      </div>
+        </div>
+        <div class="card-body" v-if="siteList==null">
+            <h4 id="unavailabledata" class="card-title">No Sites Currently Available</h4>
+        </div>
 
     </main>
 
