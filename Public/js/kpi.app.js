@@ -121,6 +121,57 @@ var kpiApp = new Vue({
     }]
 })
 },
+buildTripsAndStartsChart(){
+  Highcharts.chart('tripsAndStartsChart', {
+
+    title: {
+        text: 'Number of trips and starts'
+    },
+    yAxis: {
+        title: {
+            text: 'Number of Trips and Starts'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2010
+        }
+    },
+
+    series: [{
+        name: 'Trips',
+        data:  this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.trips)] )
+    }, {
+        name: 'Starts',
+        data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.starts)] )
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+})
+},
 buildCompressorEfficiencyChart(){
   Highcharts.chart('compressorEfficiencyChart', {
     title: {
