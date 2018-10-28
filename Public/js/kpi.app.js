@@ -189,7 +189,7 @@ buildFiredHoursChart(){
                 },
 
                 series: [{
-                    data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), item.runningTotalHours] ),
+                    data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), item.firedHours] ),
                     lineColor: Highcharts.getOptions().colors[1],
                     color: Highcharts.getOptions().colors[2],
                     fillOpacity: 0.5,
