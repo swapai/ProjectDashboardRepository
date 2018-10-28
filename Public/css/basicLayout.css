@@ -325,3 +325,7 @@ input[type=text], select {
  #logintitle {
    font-size:60px;
  }
+
+.unavailabledata {
+  color:red;
+}
