@@ -37,7 +37,7 @@ var kpiApp = new Vue({
          this.kpiList.forEach(
            (entry, index, arr) => {
              entry.runningTotalFiredHours = entry.firedHours +
-               (index == 0 ? 0 : arr[index-1].runningTotalHours)
+               (index == 0 ? 0 : arr[index-1].runningTotalFiredHours)
          });
 },
   buildOutputChart(){
