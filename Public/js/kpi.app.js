@@ -10,10 +10,10 @@ var kpiApp = new Vue({
       availability: '',
       reliability: '',
       firedHours: '',
+      runningTotalFiredHours: 0,
       trips: '',
       starts: ''
     },
-  runningTotalFiredHours: 0,
   kpiList: []
 },methods:{
   fetchSensorTimeSeriesData (sensorDeployedId) {
