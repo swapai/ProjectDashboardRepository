@@ -47,7 +47,7 @@
             <p class="card-text">Description: {{s.siteDescription}}</p>
             </div>
 
-            <div class="card-body" v-if="siteList==null">
+            <div class="card-body" v-else="siteList==null">
                 <h4 id="unavailabledata" class="card-title">No Sites Currently Available</h4>
             </div>
 
