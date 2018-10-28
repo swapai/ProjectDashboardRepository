@@ -26,36 +26,41 @@
       </div>
 
 
-    <main id="siteMain">
-
+      <main>
 
         <div>
-          <br/>
-          <h1 class="pagetitle">Site Information</h1>
-        <div class="card" style="width: 80%;" v-for="s in siteList">
-            <div class="card-body">
-            <h4 class="card-title"><a href="#" @click="gotoTurbine(s.siteId)">{{s.siteName}}</a></h4>
-            <h5 class="card-subtitle mb-2 text-muted">Primary Contact: {{s.primaryContact}}</h5>
-            <h5 class="card-subtitle mb-2 text-muted">Site Capacity: {{s.capacity}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Commerical Date: {{s.commercialDate}}</h6><br/>
-            <h6 class="card-subtitle mb-2 text-muted">Address: {{s.addrLine1}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">{{s.addrLine2}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">{{s.addrCity}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">{{s.addrState}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">{{s.addrZip}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">{{s.addrCountry}}</h6>
-            <p class="card-text">Description: {{s.siteDescription}}</p>
-            </div>
-
-        </div>
-        </div>
-        <div class="card" v-if="siteList==null">
+          <div  id="siteMain">
+            <br/>
+            <h1 class="pagetitle">Site Information</h1>
+          <div class="card" style="width: 80%;" v-for="s in siteList">
+          
           <div class="card-body">
-            <h4 id="unavailabledata" class="card-title">No Sites Currently Available</h4>
+              <h4 class="card-title"><a href="#" @click="gotoTurbine(s.siteId)">{{s.siteName}}</a></h4>
+              <h5 class="card-subtitle mb-2 text-muted">Primary Contact: {{s.primaryContact}}</h5>
+              <h5 class="card-subtitle mb-2 text-muted">Site Capacity: {{s.capacity}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Commerical Date: {{s.commercialDate}}</h6><br/>
+              <h6 class="card-subtitle mb-2 text-muted">Address: {{s.addrLine1}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">{{s.addrLine2}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">{{s.addrCity}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">{{s.addrState}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">{{s.addrZip}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">{{s.addrCountry}}</h6>
+              <p class="card-text">Description: {{s.siteDescription}}</p>
+              </div>
+            </div>
           </div>
-        </div>
 
-    </main>
+
+          <div class="card" style="width: 90%;" v-if="siteList==null">
+
+          <div class="card-body">
+              <h4 id="unavailabledata" class="card-title">No Sites Currently Available</h4>
+
+            </div>
+          </div>
+
+        </div>
+      </main>
 
 
 
