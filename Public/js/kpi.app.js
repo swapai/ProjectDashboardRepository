@@ -23,6 +23,7 @@ var kpiApp = new Vue({
       this.buildOutputChart();
       this.buildHeatRateChart();
       this.buildCompressorEfficiencyChart();
+      this.buildFiredHoursChart();
     } )
     .catch( err => {
       console.error('SITE FETCH ERROR:');
@@ -157,6 +158,49 @@ buildCompressorEfficiencyChart(){
        }]
      }
 })
+},
+buildFiredHoursChart(){
+  Highcharts.chart('firedHoursChart', {
+
+                chart: {
+                    type: 'area',
+                    zoomType: 'x',
+                    panning: true,
+                    panKey: 'shift',
+                    scrollablePlotArea: {
+                        minWidth: 600
+                    }
+                },
+
+                title: {
+                    text: 'Number of Hours Fired Over Time'
+                },
+
+                xAxis: {
+                    type: 'datetime'
+                },
+                yAxis: {
+                    title: {
+                        text: 'Running Total (Hours)'
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+
+                series: [{
+                    data: this.sensorTime.map( item => [Date.parse(item.dataCollectiveDate), item.runningTotalHours] ),
+                    lineColor: Highcharts.getOptions().colors[1],
+                    color: Highcharts.getOptions().colors[2],
+                    fillOpacity: 0.5,
+                    name: 'Fired Hours',
+                    marker: {
+                        enabled: false
+                    },
+                    threshold: null
+                }]
+
+            });
 }
 
 },
