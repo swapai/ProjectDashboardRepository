@@ -10,7 +10,6 @@ var kpiApp = new Vue({
       availability: '',
       reliability: '',
       firedHours: '',
-      runningTotalFiredHours: 0,
       trips: '',
       starts: ''
     },
