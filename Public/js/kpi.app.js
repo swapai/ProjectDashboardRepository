@@ -149,9 +149,11 @@ buildTripsAndStartsChart(){
     },
 
     series: [{
+      type:'line',
         name: 'Trips',
         data:  this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.trips)] )
     }, {
+        type:'line',
         name: 'Starts',
         data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.starts)] )
     }],
