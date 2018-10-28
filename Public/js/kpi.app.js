@@ -25,6 +25,7 @@ var kpiApp = new Vue({
       this.buildCompressorEfficiencyChart();
       this.formatSensorStats();
       this.buildFiredHoursChart();
+      this.buildTripsAndStartsChart();
     } )
     .catch( err => {
       console.error('SITE FETCH ERROR:');
