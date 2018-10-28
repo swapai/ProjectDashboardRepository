@@ -133,6 +133,9 @@ buildTripsAndStartsChart(){
             text: 'Number of Trips and Starts'
         }
     },
+    xAxis: {
+        type: 'datetime',
+    },
     legend: {
         layout: 'vertical',
         align: 'right',
