@@ -33,7 +33,6 @@
           <br/>
           <h1 class="pagetitle">Site Information</h1>
         <div class="card" style="width: 80%;" v-for="s in siteList">
-        <div v-if="siteList==null">No sites available.</div>
         <div class="card-body">
             <h4 class="card-title"><a href="#" @click="gotoTurbine(s.siteId)">{{s.siteName}}</a></h4>
             <h5 class="card-subtitle mb-2 text-muted">Primary Contact: {{s.primaryContact}}</h5>
