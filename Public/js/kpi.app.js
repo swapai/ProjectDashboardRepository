@@ -13,6 +13,7 @@ var kpiApp = new Vue({
       trips: '',
       starts: ''
     },
+  runningTotalFiredHours: 0,
   kpiList: []
 },methods:{
   fetchSensorTimeSeriesData (sensorDeployedId) {
@@ -23,6 +24,7 @@ var kpiApp = new Vue({
       this.buildOutputChart();
       this.buildHeatRateChart();
       this.buildCompressorEfficiencyChart();
+      this.formatSensorStats();
       this.buildFiredHoursChart();
     } )
     .catch( err => {
@@ -31,7 +33,13 @@ var kpiApp = new Vue({
     })
 
    },
-
+   formatSensorStats() {
+         this.kpiList.forEach(
+           (entry, index, arr) => {
+             entry.runningTotalFiredHours = entry.firedHours +
+               (index == 0 ? 0 : arr[index-1].runningTotalHours)
+         });
+},
   buildOutputChart(){
       Highcharts.chart('outputChart', {
             title: {
@@ -141,7 +149,7 @@ buildCompressorEfficiencyChart(){
     series: [{
         name: 'Compressor Efficiency (%)',
         // Data needs [ [date, num], [date2, num2 ], ... ]
-        data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.compressorEfficiency)] )
+        data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.runningTotalFiredHours)] )
     }],
     responsive: {
        rules: [{
