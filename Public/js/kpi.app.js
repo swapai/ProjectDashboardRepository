@@ -126,7 +126,7 @@ buildTripsAndStartsChart(){
   Highcharts.chart('tripsAndStartsChart', {
 
     title: {
-        text: 'Number of trips and starts'
+        text: 'Trips and Starts PLot'
     },
     yAxis: {
         title: {
@@ -141,7 +141,6 @@ buildTripsAndStartsChart(){
         align: 'right',
         verticalAlign: 'middle'
     },
-
     plotOptions: {
         series: {
             label: {
@@ -150,7 +149,6 @@ buildTripsAndStartsChart(){
             pointStart: 2010
         }
     },
-
     series: [{
       type:'line',
         name: 'Trips',
