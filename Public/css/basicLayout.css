@@ -326,6 +326,7 @@ input[type=text], select {
    font-size:60px;
  }
 
-.unavailabledata {
+#unavailabledata {
   color:red;
+  text-align:center;
 }
