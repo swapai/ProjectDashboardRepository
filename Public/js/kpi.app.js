@@ -139,7 +139,8 @@ var kpiApp = new Vue({
   }, {
       name: 'Reliability',
       data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.reliability)] )
-  }]
+    }]
+  });
   },
   buildHeatRateChart(){
     Highcharts.chart('heatRateChart', {
