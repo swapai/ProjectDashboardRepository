@@ -36,7 +36,7 @@
             <h6 class="card-subtitle mb-2 text-muted">Manufacturer: {{s.manufacturer}}</h6>
             <h6 class="card-subtitle mb-2 text-muted">Total Life Expectance: {{s.totalLifeExpentancyHours}}</h6>
             <p class="card-text">Description: {{s.sensorDescription}}</p>
-              <button class="btn btn-primary" @click="gotoKPI(s.sensorDeployedId)" role="button">Sensor Time Series Data</button>
+              <button id="button" class="btn btn-primary" @click="gotoKPI(s.sensorDeployedId)" role="button">Sensor Time Series Data</button>
           </div>
         </div>
       </div>
