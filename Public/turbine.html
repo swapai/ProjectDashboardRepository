@@ -1,25 +1,27 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/basicLayout.css" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Final Project AGS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/basicLayout.css" />
 
-  </head>
-  <body>
-    <div class="container-fluid">
-      <header>
-        <button id="homebutton" class="btn btn-primary float-right" href="client.html" role="button">HOME</button>
-        <div id="headerdiv" class="row">
-          <nav class="navbar navbar-expand-lg navbar-light" id="banner">
+  <title>Final Project AGS</title>
+
+</head>
+
+<body>
+  <div class="container-fluid">
+    <header>
+      <button id="homebutton" class="btn btn-primary float-right" href="client.html" role="button">HOME</button>
+      <div id="headerdiv" class="row">
+        <nav class="navbar navbar-expand-lg navbar-light" id="banner">
           <span id="headerName">Alternative Green System</span>
-          </nav>
+        </nav>
       </div>
-      </header>
+    </header>
 
 
     <main>
@@ -29,39 +31,40 @@
 
         <div class="card" style="width: 90%;" v-if="turbineList.length ==0">
 
-        <div class="card-body">
+          <div class="card-body">
             <h4 id="unavailabledata" class="card-title">No Turbines Currently Available</h4>
-        </div>
+          </div>
         </div>
         <div v-else>
-        <div class="card" style="height: 500px" v-for="t in turbineList">
-        <div class="card-body">
-            <h4 class="card-title">Turbine Serial Number: {{t.serialNumber}}</h4><br/>
-            <h5 class="card-subtitle mb-2 text-muted">Deployed Date: {{t.deployedDate}}</h5>
-            <h5 class="card-subtitle mb-2 text-muted">Total Fired Hours: {{t.totalFiredHours}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Total Starts: {{t.totalStarts}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">Last Planned Outage Date: {{t.lastPlannedOutageDate}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted"> Last Unplanned Outage Date: {{t.lastUnplannedOutageDate}}</h6><br/>
+          <div class="card" style="height: 500px" v-for="t in turbineList">
+            <div class="card-body">
+              <h4 class="card-title">Turbine Serial Number: {{t.serialNumber}}</h4><br />
+              <h5 class="card-subtitle mb-2 text-muted">Deployed Date: {{t.deployedDate}}</h5>
+              <h5 class="card-subtitle mb-2 text-muted">Total Fired Hours: {{t.totalFiredHours}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Total Starts: {{t.totalStarts}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Last Planned Outage Date: {{t.lastPlannedOutageDate}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted"> Last Unplanned Outage Date: {{t.lastUnplannedOutageDate}}</h6><br />
               <h5 class="card-title"> Basic Turbine Information</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Turbine Name: {{t.turbineName}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">Capacity: {{t.capacity}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">Ramp Up Time: {{t.rampUpTime}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">Maintenance Interval: {{t.maintenanceInterval}}</h6>
-            <p class="card-text">Description: {{t.turbineDescription}}</p>
+              <h6 class="card-subtitle mb-2 text-muted">Turbine Name: {{t.turbineName}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Capacity: {{t.capacity}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Ramp Up Time: {{t.rampUpTime}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Maintenance Interval: {{t.maintenanceInterval}}</h6>
+              <p class="card-text">Description: {{t.turbineDescription}}</p>
               <button id="singlebutton" class="btn btn-primary" @click="gotoSensor(t.turbineDeployedId, t.serialNumber)" role="button">Sensor Deployment Information</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </main>
 
 
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- development version, includes helpful console warnings -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="js/turbines.app.js"></script>
-  </body>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!-- development version, includes helpful console warnings -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/turbines.app.js"></script>
+</body>
+
 </html>
