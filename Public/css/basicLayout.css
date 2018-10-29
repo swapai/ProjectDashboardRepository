@@ -134,6 +134,7 @@ body {
 #button {
   position: absolute;
   bottom: 5px;
+  width:100%;
 }
 
 #singlebutton {
