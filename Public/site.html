@@ -32,6 +32,15 @@
           <div  id="siteMain">
             <br/>
             <h1 class="pagetitle">Site Information</h1>
+
+            <div class="card" style="width: 90%;" v-if="siteList==null">
+
+            <div class="card-body">
+                <h4 id="unavailabledata" class="card-title">No Sites Currently Available</h4>
+
+              </div>
+            </div>
+            
           <div class="card" style="height: 500px;" v-for="s in siteList">
           <div v-if="siteList==null">No sites available.</div>
           <div class="card-body">
@@ -52,13 +61,7 @@
           </div>
 
 
-          <div class="card" style="width: 90%;" v-if="siteList==null">
 
-          <div class="card-body">
-              <h4 id="unavailabledata" class="card-title">No Sites Currently Available</h4>
-
-            </div>
-          </div>
 
         </div>
       </main>
