@@ -90,6 +90,56 @@ var kpiApp = new Vue({
                 data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.output)] )
             }]
         });
+  },buildAvailabilityAndReliabilityChart(){
+      Highcharts.chart('availabilityAndReliabilityChart', {
+        chart: {
+      type: 'areaspline'
+  },
+  title: {
+      text: 'Availability and reliability'
+  },
+  legend: {
+      layout: 'vertical',
+      align: 'left',
+      verticalAlign: 'top',
+      x: 150,
+      y: 100,
+      floating: true,
+      borderWidth: 1,
+      backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+  },
+  xAxis: {
+      type: 'datetime',
+      plotBands: [{ // visualize the weekend
+          from: 4.5,
+          to: 6.5,
+          color: 'rgba(68, 170, 213, .2)'
+      }]
+  },
+  yAxis: {
+      title: {
+          text: 'Availability and Reliability'
+      }
+  },
+  tooltip: {
+      shared: true,
+      valueSuffix: ' units'
+  },
+  credits: {
+      enabled: false
+  },
+  plotOptions: {
+      areaspline: {
+          fillOpacity: 0.5
+      }
+  },
+  series: [{
+      name: 'Availability',
+      data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.availability)] )
+  }, {
+      name: 'Reliability',
+      data: this.kpiList.map( item => [Date.parse(item.dataCollectiveDate), Number(item.reliability)] )
+  }]
   },
   buildHeatRateChart(){
     Highcharts.chart('heatRateChart', {
@@ -126,7 +176,7 @@ buildTripsAndStartsChart(){
   Highcharts.chart('tripsAndStartsChart', {
 
     title: {
-        text: 'Trips and Starts PLot'
+        text: 'Trips and Starts Plot'
     },
     yAxis: {
         title: {
