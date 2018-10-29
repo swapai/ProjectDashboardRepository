@@ -112,8 +112,9 @@ body {
 #homebutton{
   font-size:16pt;
   color: white;
-  margin-right: 5px;
-  margin-bottom: 15px;
+  position: absolute;
+  right: 4px;
+  bottom: 7px;
 }
 
 #homebutton:hover {
