@@ -109,16 +109,11 @@ body {
     background-color:#ececec;
 }
 
-.homebutton{
-  font-size:20pt;
-  padding-right:10px;
-  padding-top:10px;
-  color: #999999;
-}
-
 #homebutton{
-  margin:14px;
   font-size:16pt;
+  color: white;
+  margin-right: 5px;
+  margin-bottom: 15px;
 }
 
 #homebutton:hover {
