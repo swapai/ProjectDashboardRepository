@@ -27,6 +27,14 @@
 
         <h1 class="pagetitle">Sensor Information</h1>
         <h5 class="pagetitle">Turbine Serial Number: {{turbineSerialNumber}}</h5>
+
+        <div class="card" style="width: 90%;" v-if="sensorList.length ==0">
+
+        <div class="card-body">
+            <h4 id="unavailabledata" class="card-title">No Sensors Currently Available</h4>
+        </div>
+        </div>
+        <div v-else>
         <div class="card" style="height: 400px;"  v-for="s in sensorList" >
         <div class="card-body">
             <h4 class="card-title">Sensor Serial Number: {{s.serialNumber}}</h4><br/>
@@ -40,6 +48,7 @@
           </div>
         </div>
       </div>
+    </div>
     </main>
 </div>
 
