@@ -10,6 +10,28 @@
   text-align: center;
   font-size: 40px;
 }
+
+@media (max-width: 640px)
+{
+    #headerName
+    {
+        display: none;
+    }
+}
+
+#headerSmallName{
+  text-align: center;
+  font-size: 40px;
+}
+
+@media (min-width: 640px)
+{
+    #headerSmallName
+    {
+        display: none;
+    }
+}
+
 header{
   width:100%;
     background-color: #333333;
