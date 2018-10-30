@@ -251,6 +251,12 @@ body {
 .tile.invoice  .body {
   color: #0aa361;
 }
+
+#kpiCard{
+margin: 5px;
+
+}
+
 .card{
   margin:50px;
   margin-top: 75px;
