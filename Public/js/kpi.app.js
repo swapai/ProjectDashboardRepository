@@ -111,7 +111,7 @@ var kpiApp = new Vue({
   },
   xAxis: {
       type: 'datetime',
-      plotBands: [{ // visualize the weekend
+      plotBands: [{ 
           from: 4.5,
           to: 6.5,
           color: 'rgba(68, 170, 213, .2)'

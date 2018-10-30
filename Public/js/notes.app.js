@@ -3,7 +3,7 @@ var notesApp = new Vue({
   data: {
     clientId: 0,
     clientName:'',
-    notesForm: { },   // populated by this.getEmptyWorkForm()
+    notesForm: { },   // populated by this.getEmptyNotesForm()
     notesList: []
   },
 
@@ -30,21 +30,20 @@ var notesApp = new Vue({
         console.error(err);
       })
 
-      // Reset workForm
+      // Reset notesForm
       this.notesForm = this.getEmptyNotesForm();
     },
 
     getEmptyNotesForm () {
       return {
-        notes: null //this.commentdata.comment
+        notes: null
       }
     }
   },
   created () {
-    // Populate workForm with default values
+    // Populate notesForm with default values
     this.notesForm = this.getEmptyNotesForm();
 
-    // TODO: Fetch task-specific data
     const url = new URL(window.location.href);
     const clientId = url.searchParams.get('clientId');
     const clientName = url.searchParams.get('clientName');

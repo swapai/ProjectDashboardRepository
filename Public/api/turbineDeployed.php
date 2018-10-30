@@ -13,7 +13,7 @@ if ($siteId < 1) {
 }
 
 
-// 1. Go to the database and get all work associated with the $taskId
+// 1. Go to the database and get all work associated with the $siteId
 $turbineDeployedArr = TurbineDeployed::getFullTurbineInformationFromSiteId($siteId);
 // 2. Convert to JSON
 $json = json_encode($turbineDeployedArr, JSON_PRETTY_PRINT);

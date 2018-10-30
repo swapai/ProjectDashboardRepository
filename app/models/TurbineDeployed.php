@@ -36,65 +36,6 @@ class TurbineDeployed
     $this->maintenanceInterval = intval ($row['maintenanceInterval']);
     }
 
-    // public static function getTurbineDeployed() {
-    //   // 1. Connect to the database
-    //   $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-    //
-    //   // 2. Prepare the query
-    //   $sql = 'SELECT * FROM turbineDeployed';
-    //   $statement = $db->prepare($sql);
-    //
-    //   // 3. Run the query
-    //   $success = $statement->execute();
-    //
-    //   // 4. Handle the results
-    //   $arr = [];
-    //   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-    //     $theTurbineDeployed =  new TurbineDeployed($row);
-    //     array_push($arr, $theTurbineDeployed);
-    //   }
-    //   return $arr;
-    //   }
-    //
-    // public function create() {
-    //   $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-    //   $sql = 'INSERT TurbineDeployed (turbineId, siteId, serialNumber, deployedDate, totalFiredHours, totalStarts, lastPlannedOutageDate, lastUnplannedOutageDate)
-    //         VALUES (?, ?, ?, ?, ?, ?, ?, ?)';
-    //   $statement = $db->prepare($sql);
-    //   $success = $statement->execute([
-    //         $this->turbineId,
-    //         $this->siteId,
-    //         $this->serialNumber,
-    //         $this->deployedDate,
-    //         $this->totalFiredHours,
-    //         $this->totalStarts,
-    //         $this->lastPlannedOutageDate,
-    //         $this->lastUnplannedOutageDate
-    //       ]);
-    //
-    //       $this->turbineDeployedId = $db->lastInsertId();
-    //     }
-    //
-    //     public static function getTurbineDeployedByTurbineDeployedId(int $turbineDeployedId) {
-    //       // 1. Connect to the database
-    //       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-    //       // 2. Prepare the query
-    //       $sql = 'SELECT * FROM turbineDeployed WHERE turbineDeployedId = ?';
-    //       $statement = $db->prepare($sql);
-    //       // 3. Run the query
-    //       $success = $statement->execute(
-    //           [$turbineDeployedId]
-    //       );
-    //       // 4. Handle the results
-    //       $arr = [];
-    //       while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-    //         // 4.a. For each row, make a new work object
-    //         $turbineDeployedItem =  new TurbineDeployed($row);
-    //         array_push($arr, $turbinDeployedeItem);
-    //       }
-    //         return $arr;
-    //     }
-
         public static function getFullTurbineInformationFromSiteId( int $siteId){
           $db = new PDO(DB_SERVER, DB_USER, DB_PW);
           // 2. Prepare the query
@@ -107,7 +48,6 @@ class TurbineDeployed
           // 4. Handle the results
           $arr = [];
           while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
-            // 4.a. For each row, make a new work object
             $turbineDeployedItem =  new TurbineDeployed($row);
             array_push($arr, $turbineDeployedItem);
           }
