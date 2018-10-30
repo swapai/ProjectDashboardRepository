@@ -256,12 +256,13 @@ body {
 
 #kpiCard{
 margin: 5px;
-margin-bottom: 10px;
+margin-bottom: 15px;
 
 }
 
 .kpisubdescrip {
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 0px;
 }
 
 .card{
